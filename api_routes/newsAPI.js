@@ -10,4 +10,4 @@ router.router("/:id")
 
 router.route("/:refresh").get(newsCtrl.restock);
 
-module.exports = router;
+module.exports = ("newsAPI", router);
