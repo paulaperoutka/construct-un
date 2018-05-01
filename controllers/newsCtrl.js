@@ -36,12 +36,12 @@ module.exports = {
 
 						const result = {
 							sphere: sphere,
-							date: $(element).children("span.date-display-single").text(),
-							title: $(element).children("h1.story-title").text(),
-							link: $(element).children("h1 a").attr("href"),
-							category: $(element).children("div.field-item a").text(),
-							summary: $(element).children("p").text(),
-							imageLink: $(element).children("img").attr("src")
+							date: $(element).find("span").children(".date-display-single").text(),
+							title: $(element).find("h1").children(".story-title").text(),
+							link: $(element).find("h1").children("a").attr("href"),
+							category: $(element).find("div.field-item").children("a").text(),
+							summary: $(element).find("p").text(),
+							imageLink: $(element).find("img").attr("src")
 						};
 
 						db.NewsArticle
@@ -50,6 +50,8 @@ module.exports = {
 							.catch((err) => console.log(err));
 
 					});
+
+					res.send("Articles scraped from https://news.un.org/en/news/region/" + sphere);
 
 				})
 				.catch((err) => res.json(err));
