@@ -1,6 +1,10 @@
 const 
-	router = request("express").Router(),
-	newsCtrl = require("../controllers/newsCtrl");
+	express = request("express"),
+	controllers = require("../controllers");
+
+const 
+	router = express.Router();
+	newsCtrl = controllers.newsCtrl;
 
 router.route("/").get(newsCtrl.findAll);
 
