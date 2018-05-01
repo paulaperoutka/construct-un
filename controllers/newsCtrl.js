@@ -63,5 +63,7 @@ module.exports = {
 
 		const spheres = ["africa", "americas", "asia-pacific", "middle-east", "europe"];
 
+		sectionScrape("africa");
+
 	}
 }
