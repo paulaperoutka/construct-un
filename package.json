@@ -1,8 +1,11 @@
 {
   "name": "construct-un",
   "version": "0.1.0",
+  "author": "PaulaP <paulaperoutka@gmail.com>, TobyG <tgiachett@gmail.com>, AlexFP <florianprescott@googlemail.com>",
+  "license": "MIT",
   "private": false,
   "main": "server.js",
+  "repository": "git@github.com:paulaperoutka/construct-un",  "repository": "git@github.com:paulaperoutka/construct-un",
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
@@ -11,8 +14,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.17",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
-  },
+    "react-scripts": "^1.1.4"
+  }
 }
+
