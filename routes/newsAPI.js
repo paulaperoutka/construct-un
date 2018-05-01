@@ -3,15 +3,16 @@ const
 	controllers = require("../controllers");
 
 const 
-	router = express.Router();
-	newsCtrl = controllers.newsCtrl;
+	router = express.Router(),
+	news = controllers.newsController,
+	comments = controllers.commentController;
 
-router.route("/").get(newsCtrl.findAll);
+router.route("/").get(news.findAll);
 
-router.route("/refresh").get(newsCtrl.restock);
+router.route("/refresh").get(news.restock);
 
 router.route("/article/:id")
-	.get(newsCtrl.findById)
-	.put(newsCtrl.comment);
+	.get(news.findById)
+	.put(comments.comment);
 
 module.exports = router;

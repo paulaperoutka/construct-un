@@ -32,7 +32,8 @@ const articleSchema = new mongoose.Schema({
 	imageAuthor: {
 		type: String,
 		required: true
-	}	
+	},
+	comments: []	
 });
 
 module.exports = mongoose.model("NewsArticle", articleSchema);

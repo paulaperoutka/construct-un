@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === "production") {
 }
 
 app.use("/api/news", routes.newsAPI);
-app.use("/api/resolution", routes.resolutionAPI);
+// app.use("/api/resolution", routes.resolutionAPI);
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
