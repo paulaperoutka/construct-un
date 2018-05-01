@@ -40,7 +40,8 @@ module.exports = {
 							title: $(element).children("h1.story-title").text(),
 							link: $(element).children("h1 a").attr("href"),
 							category: $(element).children("div.field-item a").text(),
-							summary: $(element).children("p").text()
+							summary: $(element).children("p").text(),
+							imageLink: $(element).children("img").attr("src")
 						};
 
 						db.NewsArticle
