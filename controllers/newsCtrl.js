@@ -32,20 +32,22 @@ module.exports = {
 					const $ = cheerio.load(res.data);
 
 					$("div.views-row").each((i, element) => {
-						const result = {};
-						result
-							.sphere = sphere,
-							.date = $(element).children("span.date-display-single").text(),
-							.title = $(element).children("h1.story-title").text(),
-							.link = $(element).children("h1 a").attr("href"),
-							.category = $(element).children("div.field-item a").text(),
-							.summary = .children("p").text();
-					});
 
-					db.NewsArticle
-						.create(result)
-						.then((dbNewsArt) => console.log(dbNewsArt))
-						.catch((err) => console.log(err));
+						const result = {
+							sphere: sphere,
+							date: $(element).children("span.date-display-single").text(),
+							title: $(element).children("h1.story-title").text(),
+							link: $(element).children("h1 a").attr("href"),
+							category: $(element).children("div.field-item a").text(),
+							summary: .children("p").text()
+						};
+
+						db.NewsArticle
+							.create(result)
+							.then((dbNewsArt) => console.log(dbNewsArt))
+							.catch((err) => console.log(err));
+
+					});
 
 				})
 				.catch((err) => res.json(err));
