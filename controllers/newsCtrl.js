@@ -55,7 +55,7 @@ module.exports = {
 
 		}
 
-		const spheres = [africa, americas, asiaPacific, middleEast, europe];
+		const spheres = ["africa", "americas", "asia-pacific", "middle-east", "europe"];
 
 	}
 }
