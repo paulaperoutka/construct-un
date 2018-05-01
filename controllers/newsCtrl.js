@@ -16,11 +16,11 @@ module.exports = {
 			.then(dbModel => res.json(dbModel))
 			.catch(err => res.status(400).json(err));
 	},
-	// comment: function(req, res) {
-	// 	.findOneAndUpdate({_id: req.params.id}, req.body)
-	// 	.then(dbModel => res.json(dbModel))
-	// 	.catch(err => res.status(400).json(err))
-	// },
+	comment: function(req, res) {
+		.findOneAndUpdate({_id: req.params.id}, req.body)
+		.then(dbModel => res.json(dbModel))
+		.catch(err => res.status(400).json(err))
+	},
 	restock: function(req, res) {
 		
 		sectionScrape = function(sphere) {
