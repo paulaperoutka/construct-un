@@ -36,19 +36,21 @@ module.exports = {
 
 						const result = {
 							sphere: sphere,
-							date: $(element).find("div.body-wrapper").children("span.date-display-single").text(),
+							date: $(element).find("div.body-wrapper").children("div.story-date").text(),
 							title: $(element).find("div.body-wrapper").children("h1.story-title").text(),
 							link: $(element).find("div.body-wrapper").children("h1.story-title").has("a").attr("href"),
-							category: $(element).find("div.body-wrapper").children("div.field-item").text(),
+							category: $(element).find("div.body-wrapper").children("div.topics").text(),
 							summary: $(element).find("div.body-wrapper").children("div.news-body").text(),
 							imageLink: $(element).find("img").attr("src"),
 							imageAuthor: $(element).find("div.field-name-field-scald-photo-credit").children("span.un-news-teaser-scald-credit")
 						};
 
-						db.NewsArticle
-							.create(result)
-							.then((dbNewsArt) => console.log(dbNewsArt))
-							.catch((err) => console.log(err));
+						if(result.title && result.link) {
+							db.NewsArticle
+								.create(result)
+								.then((dbNewsArt) => console.log(dbNewsArt))
+								.catch((err) => console.log(err));
+						}
 
 					});
 
