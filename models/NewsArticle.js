@@ -3,28 +3,36 @@ const mongoose = require("mongoose");
 const articleSchema = new mongoose.Schema({
 	sphere: {
 		type: String,
-		require: true
+		required: true
 	},
 	date: {
 		type: String,
-		require: true
+		required: true
 	},
 	title: {
 		type: String,
-		require: true
+		required: true
 	},
 	link: {
 		type: String,
-		require: true
+		required: true
 	},
 	category: {
 		type: String,
-		require: true
+		required: true
 	},
 	summary: {
 		type: String,
-		require: true
-	}
+		required: true
+	},
+	imageLink: {
+		type: String,
+		required: true
+	},
+	imageAuthor: {
+		type: String,
+		required: true
+	}	
 });
 
 module.exports = mongoose.model("NewsArticle", articleSchema);
