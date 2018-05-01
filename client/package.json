@@ -2,8 +2,7 @@
   "name": "construct-un-client",
   "version": "1.0.0",
   "description": "",
-  "author": "PaulaP <paulaperoutka@gmail.com>, TobyG <tgiachett@gmail.com>, AlexFP <florianprescott@googlemail.com>"
-  ,
+  "author": "PaulaP <paulaperoutka@gmail.com>, TobyG <tgiachett@gmail.com>, AlexFP <florianprescott@googlemail.com>",
   "main": "index.js",
   "private": false,
   "proxy": "http://localhost:3001/",
@@ -19,3 +18,4 @@
     "eject": "react-scripts eject"
   }
 }
+
