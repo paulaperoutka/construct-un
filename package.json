@@ -1,8 +1,8 @@
 {
   "name": "construct-un",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
-  "repository": "git@github.com:EPluribusAlex/construct-un.git",
+  "repository": "git@github.com:paulaperoutka/construct-un",
   "author": "PaulaP <paulaperoutka@gmail.com>, TobyG <tgiachett@gmail.com>, AlexFP <florianprescott@googlemail.com>",
   "license": "MIT",
   "dependencies": {
@@ -10,6 +10,15 @@
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
-    "mongoose": "^5.0.17"
+    "mongoose": "^5.0.17",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
