@@ -1,6 +1,6 @@
 const 
 	express = require("express"),
-	controllers = require("../controllers/newsCtrl");//require("../controllers");
+	controllers = require("../controllers");
 
 const 
 	router = express.Router();
