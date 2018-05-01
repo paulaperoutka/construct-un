@@ -36,12 +36,13 @@ module.exports = {
 
 						const result = {
 							sphere: sphere,
-							date: $(element).find("span").children(".date-display-single").text(),
-							title: $(element).find("h1").children(".story-title").text(),
-							link: $(element).find("h1").children("a").attr("href"),
-							category: $(element).find("div.field-item").children("a").text(),
-							summary: $(element).find("p").text(),
-							imageLink: $(element).find("img").attr("src")
+							date: $(element).find("div.body-wrapper").children("span.date-display-single").text(),
+							title: $(element).find("div.body-wrapper").children("h1.story-title").text(),
+							link: $(element).find("div.body-wrapper").children("h1.story-title").has("a").attr("href"),
+							category: $(element).find("div.body-wrapper").children("div.field-item").text(),
+							summary: $(element).find("div.body-wrapper").children("div.news-body").text(),
+							imageLink: $(element).find("img").attr("src"),
+							imageAuthor: $(element).find("div.field-name-field-scald-photo-credit").children("span.un-news-teaser-scald-credit")
 						};
 
 						db.NewsArticle
