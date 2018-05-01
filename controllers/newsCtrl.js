@@ -27,10 +27,10 @@ module.exports = {
 		sectionScrape = function(sphere) {
 
 			axios
-				.get("*")
-				.then((res) => {
+				.get("https://news.un.org/en/news/region/" + sphere)
+				.then((page) => {
 
-					const $ = cheerio.load(res.data);
+					const $ = cheerio.load(page.data);
 
 					$("div.views-row").each((i, element) => {
 
