@@ -6,12 +6,12 @@ const
 	router = express.Router();
 	newsCtrl = controllers.newsCtrl;
 
-router.route("/").get(newsCtrl.findAll)
+router.route("/").get(newsCtrl.findAll);
 
-router.route("/:id")
+router.route("/refresh").get(newsCtrl.restock);
+
+router.route("/article/:id")
 	.get(newsCtrl.findById)
-	.put(newsCtrl.comment)
-
-router.route("/refresh").get(newsCtrl.restock)
+	.put(newsCtrl.comment);
 
 module.exports = router;
