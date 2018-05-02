@@ -22,9 +22,6 @@
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
-    "mongoose": "^5.0.17",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "^1.1.4"
+    "mongoose": "^5.0.17"
   }
 }
