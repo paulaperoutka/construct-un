@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import World from './components/Map'
-import Chambers from './components/Chambers'
+import World from './components/Map';
+import Chambers from './components/Chambers';
+import Chat from './components/Chat';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         </p>
         <World />
         <Chambers />
+        <Chat />
       </div>
       
 
