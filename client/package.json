@@ -4,6 +4,7 @@
   "description": "",
   "author": "PaulaP <paulaperoutka@gmail.com>, TobyG <tgiachett@gmail.com>, AlexFP <florianprescott@googlemail.com>",
   "main": "index.js",
+  "license": "MIT",
   "private": false,
   "proxy": "http://localhost:3001/",
   "dependencies": {
