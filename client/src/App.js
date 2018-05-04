@@ -24,6 +24,7 @@ import Chat from './components/Chat';
 import Newsfeed from "./components/News";
 
 class App extends Component {
+
   constructor(props) {
     super(props);
 
@@ -32,11 +33,13 @@ class App extends Component {
       isOpen: false
     };
   }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
+  } 
+
   render() {
     return (
       <div className="App">
