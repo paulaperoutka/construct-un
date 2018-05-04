@@ -37,18 +37,32 @@ class Newsfeed extends React.Component {
 								start = i * 5,
 								finish = start + 5;
 
+							const slide = this.state.slideGen(start, finish);
+
 							let className;
 							if(i = 0) {
 								className = "carousel-item active";
 							} else {
 								className = "carousel-item";
 							}
-							
-							const slide = this.state.slideGen(start, finish);
-							slide.map(article => {
-								<div className={className}>
+
+							<div className={className}>
+								<div className="row">
+									<div className="col-lg-1">
+									</div>
+										{
+											slide.map(article => 
+												<div className="col-lg-2">
+													<div className="article">
+														<img src=${article.imageLink} alt="*" class="img-thumbnail">
+													</div>
+												</div>
+											)
+										}
+									<div className="col-lg-1">
+									</div>
 								</div>
-							})
+							</div>
 						}
 					}
 				</div>
