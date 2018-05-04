@@ -1,88 +1,110 @@
 import React from "react";
 import axios from "axios";
-import "reactstrap";
+import {
+	Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
+  Button,
+  CardBody,
+  Card, 
+  Collapse
+} from "reactstrap";
 import "./newsfeed.css";
+
+let items = [];
 
 class Newsfeed extends React.Component {
 
-	state = {
-		articles: [],
-		slideGen: function(start, finish) {
-			const slide = [];
-			for(let i = start; i++; i <= finish) {
-				this.articles[i].push(slide);
-			}
-			console.log(slide);
-			return slide;
-		},
-		get totalSlides() {
-			return this.articles.length / 5;
-		},
-		slideFramework: function() {
-			for(let i = 0; i < this.totalSlides; i++) {
-				const 
-					start = i * 5,
-					finish = start + 5;
-
-				const slide = this.slideGen(start, finish);
-
-				let className;
-				if(i = 0) {
-					className = "carousel-item active";
-				} else {
-					className = "carousel-item";
-				}
-
-				return (
-					<div className={className}>
-						<div className="row">
-							<div className="col-lg-1">
-							</div>
-								{this.slideArticle(slide)}
-							<div className="col-lg-1">
-							</div>
-						</div>
-					</div>
-				)
-			}
-		},
-		slideArticle: function(slide) {
-			slide.map(article => 
-				<div className="col-lg-2">
-					<div className="article">
-						<img src={article.imageLink} alt="*" className="img-thumbnail">
-						</img>
-					</div>
-				</div>
-			)
-		}
-	};
-
 	componentDidMount() {
 		axios.get("/api/news")
-		.then(res => this.setState({
-			articles: res.data
-		}))
+		.then(res => res.data
+      .forEach(item => items.push(item)))
 		.catch(err => console.log(err));
 	}
 
+	constructor(props) {
+    super(props);
+    this.state = { 
+      activeIndex: 0,
+      collapse: false 
+    };
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.goToIndex = this.goToIndex.bind(this);
+    this.onExiting = this.onExiting.bind(this);
+    this.onExited = this.onExited.bind(this);
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({ collapse: !this.state.collapse });
+  }
+
+  onExiting() {
+    this.animating = true;
+  }
+
+  onExited() {
+    this.animating = false;
+  }
+
+  next() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+    this.setState({ activeIndex: nextIndex });
+  }
+
+  previous() {
+    if (this.animating) return;
+    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+    this.setState({ activeIndex: nextIndex });
+  }
+
+  goToIndex(newIndex) {
+    if (this.animating) return;
+    this.setState({ activeIndex: newIndex });
+  }	
+
 	render() {
-		return (
-			<div id="newsfeed" className="carousel slide" data-ride="carousel">
-				<div className="carousel-inner">
-					{this.state.slideFramework()}
-				</div>
-				<a className="carousel-control-prev" href="#newsfeed" role="button" data-slide="prev">
-			    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-			    <span className="sr-only">Previous</span>
-			  </a>
-			  <a className="carousel-control-next" href="#newsfeed" role="button" data-slide="next">
-			    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-			    <span className="sr-only">Next</span>
-			  </a>
-			</div>
-		)
-	}
+    const { activeIndex } = this.state;
+
+    const slides = items.map((item) => {
+      return (
+        <CarouselItem
+          onExiting={this.onExiting}
+          onExited={this.onExited}
+          key={item.imageLink}
+        >
+          <img src={item.imageLink} alt="*" />
+          <CarouselCaption captionText={item.title} captionHeader={item.title} />
+        </CarouselItem>
+      );
+    });
+
+    return (
+      <div>
+        <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
+        <Collapse isOpen={this.state.collapse}>
+          <Card>
+            <CardBody>
+              <Carousel
+                activeIndex={activeIndex}
+                next={this.next}
+                previous={this.previous}
+              >
+                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+                {slides}
+                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+              </Carousel>
+            </CardBody>
+          </Card>
+        </Collapse>
+      </div>
+    );
+  }
 
 }
 
