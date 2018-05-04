@@ -1,1 +1,1 @@
-export {default} from "./newsfeed";
+export {default} from "./Newsfeed";

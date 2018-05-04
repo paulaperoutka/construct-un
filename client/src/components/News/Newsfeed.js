@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import {carousel} from "reactstrap";
+import "reactstrap";
 import "./newsfeed.css";
 
 class Newsfeed extends React.Component {
@@ -12,10 +12,49 @@ class Newsfeed extends React.Component {
 			for(let i = start; i++; i <= finish) {
 				this.articles[i].push(slide);
 			}
+			console.log(slide);
 			return slide;
 		},
 		get totalSlides() {
 			return this.articles.length / 5;
+		},
+		slideFramework: function() {
+			for(let i = 0; i < this.totalSlides; i++) {
+				const 
+					start = i * 5,
+					finish = start + 5;
+
+				const slide = this.slideGen(start, finish);
+
+				let className;
+				if(i = 0) {
+					className = "carousel-item active";
+				} else {
+					className = "carousel-item";
+				}
+
+				return (
+					<div className={className}>
+						<div className="row">
+							<div className="col-lg-1">
+							</div>
+								{this.slideArticle(slide)}
+							<div className="col-lg-1">
+							</div>
+						</div>
+					</div>
+				)
+			}
+		},
+		slideArticle: function(slide) {
+			slide.map(article => 
+				<div className="col-lg-2">
+					<div className="article">
+						<img src={article.imageLink} alt="*" className="img-thumbnail">
+						</img>
+					</div>
+				</div>
+			)
 		}
 	};
 
@@ -29,48 +68,15 @@ class Newsfeed extends React.Component {
 
 	render() {
 		return (
-			<div id="newsfeed" class="carousel slide" data-ride="carousel">
+			<div id="newsfeed" className="carousel slide" data-ride="carousel">
 				<div className="carousel-inner">
-					{
-						for(let i = 0; i++; i < this.state.totalSlides) {
-							const 
-								start = i * 5,
-								finish = start + 5;
-
-							const slide = this.state.slideGen(start, finish);
-
-							let className;
-							if(i = 0) {
-								className = "carousel-item active";
-							} else {
-								className = "carousel-item";
-							}
-
-							<div className={className}>
-								<div className="row">
-									<div className="col-lg-1">
-									</div>
-										{
-											slide.map(article => 
-												<div className="col-lg-2">
-													<div className="article">
-														<img src=${article.imageLink} alt="*" class="img-thumbnail">
-													</div>
-												</div>
-											)
-										}
-									<div className="col-lg-1">
-									</div>
-								</div>
-							</div>
-						}
-					}
+					{this.state.slideFramework()}
 				</div>
 				<a className="carousel-control-prev" href="#newsfeed" role="button" data-slide="prev">
 			    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
 			    <span className="sr-only">Previous</span>
 			  </a>
-			  <a class="carousel-control-next" href="#newsfeed" role="button" data-slide="next">
+			  <a className="carousel-control-next" href="#newsfeed" role="button" data-slide="next">
 			    <span className="carousel-control-next-icon" aria-hidden="true"></span>
 			    <span className="sr-only">Next</span>
 			  </a>
