@@ -6,7 +6,6 @@ import createSagaMiddleware from 'redux-saga';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
 import reducers from './components/Chat/reducers';
 import handleNewMessage from './components/Chat/sagas';
 import setupSocket from './components/Chat/sockets';
@@ -30,6 +29,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// registerServiceWorker();
+
 
 
