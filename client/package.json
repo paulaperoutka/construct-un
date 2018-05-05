@@ -4,9 +4,11 @@
   "description": "",
   "author": "PaulaP <paulaperoutka@gmail.com>, TobyG <tgiachett@gmail.com>, AlexFP <florianprescott@googlemail.com>",
   "main": "index.js",
+  "license": "MIT",
   "private": false,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "chance": "^1.0.16",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
