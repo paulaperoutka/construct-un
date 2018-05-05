@@ -28,7 +28,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Portal from "./components/Portal";
-import Room from "./components/Room";
+import Room from "./components/ChambersPage";
 
 import { Container } from "reactstrap";
 import './App.css';
@@ -36,20 +36,20 @@ import './App.css';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
-  }
+  //   this.toggle = this.toggle.bind(this);
+  //   this.state = {
+  //     isOpen: false
+  //   };
+  // }
 
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  } 
+  // toggle() {
+  //   this.setState({
+  //     isOpen: !this.state.isOpen
+  //   });
+  // } 
 
   render() {
     return (
@@ -126,7 +126,7 @@ class App extends Component {
       <Router>
         <Container>
           <Route exact path="/" component={Portal} />
-          <Route exact path="/securitycouncil" component={Room} />
+          <Route exact path="/securitycouncil" component={ChambersPage} />
         </Container>
       </Router>
     );
