@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import World from './components/Map';
-import Chambers from './components/Chambers';
-import Chat from './components/Chat';
+import Newsfeed from '../Newsfeed';
+import World from '../Map';
+import Chambers from '../Chambers';
+import Chat from '../Chat';
 import "./ChambersPage.css";
 
 class ChambersPage extends Component {
@@ -13,6 +14,7 @@ class ChambersPage extends Component {
 	render() {
 		return(
 			<div className="wrapper">
+				<Newsfeed />
 				<World />
 				<Chambers />
 				<Chat />
