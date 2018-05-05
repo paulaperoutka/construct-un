@@ -28,7 +28,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Portal from "./components/Portal";
-import Room from "./components/ChambersPage";
+import ChambersPage from "./components/ChambersPage";
 
 import { Container } from "reactstrap";
 import './App.css';
