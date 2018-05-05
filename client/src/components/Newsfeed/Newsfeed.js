@@ -11,7 +11,7 @@ import {
   Card, 
   Collapse
 } from "reactstrap";
-import "./newsfeed.css";
+import "./Newsfeed.css";
 
 let items = [];
 
