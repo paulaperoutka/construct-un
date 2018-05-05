@@ -3,10 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Portal from "./components/Portal";
-
-// import World from './components/Map';
-// import Chambers from './components/Chambers';
-// import Chat from './components/Chat';
+import Room from "./components/Room";
 
 import { Container } from "reactstrap";
 import './App.css';
@@ -17,6 +14,7 @@ class App extends Component {
       <Router>
         <Container>
           <Route exact path="/" component={Portal} />
+          <Route exact path="/securitycouncil" component={Room} />
         </Container>
       </Router>
     );
@@ -25,8 +23,5 @@ class App extends Component {
 
 export default App;
 
-// <World />
-// <Chambers />
-// <Chat />
 
 
