@@ -1,0 +1,22 @@
+body {
+  background-image: url("https://i.ytimg.com/vi/T8-YdgU-CF4/maxresdefault.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 {
+	font-size: 100px;
+	text-align: center;
+	margin-top: 80px;
+}
+
+.form-group {
+	text-align: center;
+	margin-top: 400px;
+}
+
+.form-text {
+	font-size: 24px;
+
+}
