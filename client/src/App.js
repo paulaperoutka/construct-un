@@ -79,25 +79,25 @@ class App extends Component {
         <Container>
 
           <Row>
-            <Col>
+            <Col xs="auto">
               <Newsfeed />
             </Col>
           </Row>
 
           <Row>
-            <Col>
+            <Col xs="auto">
               <World />
             </Col>
           </Row>
 
           <Row>
-            <Col>
+            <Col xs="auto">
               <Chambers />
             </Col>
           </Row>
 
           <Row>
-            <Col>
+            <Col xs="auto">
               <Chat />
             </Col>
           </Row>
