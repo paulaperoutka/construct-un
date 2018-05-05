@@ -16,12 +16,6 @@ module.exports = {
 			.then(dbModel => res.json(dbModel))
 			.catch(err => res.status(400).json(err));
 	},
-	comment: function(req, res) {
-		db.NewsArticle
-			.findOneAndUpdate({_id: req.params.id}, req.body)
-			.then(dbModel => res.json(dbModel))
-			.catch(err => res.status(400).json(err));
-	},
 	restock: function(req, res) {
 		
 		sectionScrape = function(region) {
@@ -66,9 +60,9 @@ module.exports = {
 
 		const regions = ["africa", "americas", "asia-pacific", "middle-east", "europe"];
 
-		db.NewsArticle.remove({}, regions.forEach((region) => {
-			sectionScrape(region);
-		}), res.send("Articles scraped from https://news.un.org"));
+		db.NewsArticle.remove({}, regions.forEach((region) => sectionScrape(region)));
+
+		res.send("Articles scraped from https://news.un.org");
 
 	}
 }

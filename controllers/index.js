@@ -1,3 +1,4 @@
 module.exports = {
-	newsCtrl: require("./newsCtrl")
+	newsController: require("./newsController"),
+	commentController: require("./commentController")
 }
