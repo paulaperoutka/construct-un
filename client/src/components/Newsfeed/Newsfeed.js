@@ -9,7 +9,9 @@ import {
   Button,
   CardBody,
   Card, 
-  Collapse
+  Collapse,
+  Row,
+  Col
 } from "reactstrap";
 import "./Newsfeed.css";
 
@@ -84,25 +86,27 @@ class Newsfeed extends React.Component {
     });
 
     return (
-      <div>
-        <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
-        <Collapse isOpen={this.state.collapse}>
-          <Card>
-            <CardBody>
-              <Carousel
-                activeIndex={activeIndex}
-                next={this.next}
-                previous={this.previous}
-              >
-                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-                {slides}
-                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-              </Carousel>
-            </CardBody>
-          </Card>
-        </Collapse>
-      </div>
+      <Row>
+        <Col xs="auto">
+          <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
+          <Collapse isOpen={this.state.collapse}>
+            <Card>
+              <CardBody>
+                <Carousel
+                  activeIndex={activeIndex}
+                  next={this.next}
+                  previous={this.previous}
+                >
+                  <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+                  {slides}
+                  <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                  <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                </Carousel>
+              </CardBody>
+            </Card>
+          </Collapse>
+        </Col>
+      </Row>
     );
   }
 
