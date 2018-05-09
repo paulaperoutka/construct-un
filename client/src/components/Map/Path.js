@@ -9,11 +9,7 @@ class Path extends React.Component {
       style: {
         fill: '#b9b9b9',
         fillOpacity: 1,
-        stroke: '#ffffff',
-        strokeWidth: '0.99986994', 
-        strokeMiterlimit: '3.97446823', 
-        strokeDasharray: 'none', 
-        strokeOpacity: 1
+        
 
       }
     }
