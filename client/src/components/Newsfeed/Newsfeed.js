@@ -81,7 +81,7 @@ class Newsfeed extends React.Component {
         >
           <Row>
             <Col>
-              <h2>{item.title}</h2>
+              <h3>{item.title}</h3>
             </Col>
           </Row>
           <Row>
