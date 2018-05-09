@@ -91,7 +91,7 @@ class Newsfeed extends React.Component {
           </Row>
           <Row>
             <Col>
-              <h4 className="author">{item.imageAuthor}</h4>
+              <p className="author">{item.imageAuthor}</p>
             </Col>
           </Row>
           <Row>  
