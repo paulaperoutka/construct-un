@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import Newsfeed from '../Newsfeed';
 import World from '../Map';
 import Chambers from '../Chambers';
@@ -14,11 +14,21 @@ class ChambersPage extends Component {
 	render() {
 		return(
 			<div className="wrapper">
-				<Newsfeed />
-				<World />
-				<Chambers />
-				<Chat />
-		   </div>
+				<Row>
+					<Col xs="4">
+						<Newsfeed />
+					</Col>
+					<Col xs="8">
+						<Row>
+							<World />
+						</Row>
+						<Row>
+							<Chambers />
+						</Row>
+					</Col>
+				</Row>
+					<Chat />
+		  </div>
 		);
 	}
 }
