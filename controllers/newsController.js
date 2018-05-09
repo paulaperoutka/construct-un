@@ -57,7 +57,10 @@ module.exports = {
 
 		const regions = ["africa", "americas", "asia-pacific", "middle-east", "europe"];
 
-		db.NewsArticle.remove({}, regions.forEach((region) => sectionScrape(region)));
+		db.NewsArticle
+			.remove({})
+			.then(regions.forEach(region => sectionScrape(region)))
+			.catch(err => console.log(err));
 
 		res.send("Articles scraped from https://news.un.org");
 
