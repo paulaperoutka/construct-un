@@ -81,16 +81,20 @@ class Newsfeed extends React.Component {
         >
           <Row>
             <Col>
-              <img src={item.imageLink} alt="*" />
-            </Col>
-            <Col>
-              <h2>{item.title}</h2>
+              <h3>{item.title}</h3>
             </Col>
           </Row>
           <Row>
             <Col>
-              <h4 className="author">{item.imageAuthor}</h4>
+              <img src={item.imageLink} alt="*" />
             </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p className="author">{item.imageAuthor}</p>
+            </Col>
+          </Row>
+          <Row>  
             <Col>
               <p>{item.summary}</p>
             </Col>
