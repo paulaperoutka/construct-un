@@ -18,7 +18,7 @@ render() {
 
 
     <div>
-    <CountryModal />
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-29.947200 60.986600 2754.066400 1396.573900" version={1.0} height={.50*(window.innerHeight)} width={.50*(window.innerWidth)} id="svg1926">
       <metadata id="metadata24111">
         

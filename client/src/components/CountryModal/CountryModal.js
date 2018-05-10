@@ -24,7 +24,9 @@ class CountryModal extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Country Name prop</ModalHeader>
           <ModalBody>
-            <Path d="m 853.0452,739.4375 c 9.68057,-7.09355 -2.90581,-17.21676 2.772,-25.3089 3.97201,-10.34445 14.10014,4.05983 16.70156,4.7326 -0.0529,6.84278 2.73367,-3.74675 2.65429,5.05789 -4.25323,8.23932 -7.10251,19.67497 -17.21988,16.07996 -1.30263,2.22265 -3.6131,0.46096 -4.90797,-0.56155 z" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-29.947200 60.986600 2754.066400 1396.573900" version={1.0} height={.50*(window.innerHeight)} width={.50*(window.innerWidth)} id="svg1926">
+              <path d={this.props.dForModal} style={{fill: '#b9b9b9'}} />
+            </svg>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}

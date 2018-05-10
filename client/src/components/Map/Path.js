@@ -48,7 +48,7 @@ render() {
           onMouseOut={this.deHighlight}
           onClick={() => { this.child.toggle();}}
           />
-          <CountryModal ref={instance => { this.child = instance; }} />
+          <CountryModal dForModal={this.props.d} ref={instance => { this.child = instance; }} />
         </g>
         
     );
