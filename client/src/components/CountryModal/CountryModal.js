@@ -30,9 +30,9 @@ class CountryModal extends React.Component {
       <foreignObject>
         
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Country Name prop</ModalHeader>
+          <ModalHeader toggle={this.toggle}>{this.props.id}</ModalHeader>
           <ModalBody>
-          <svg preserveAspectRatio="true" xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0} height={.50*(window.innerHeight)} width={498}>
+          <svg preserveAspectRatio="true" xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0}>
               <path id={this.props.id} d={this.props.dForModal} style={{fill: '#b9b9b9'}}   />
             </svg>
           </ModalBody>
