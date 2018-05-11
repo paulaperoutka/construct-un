@@ -43,12 +43,13 @@ render() {
         <g>
           <path 
           d={this.props.d}
+          id={this.props.id}
           style={this.state.style}
           onMouseOver={this.highlight}
           onMouseOut={this.deHighlight}
           onClick={() => { this.child.toggle();}}
           />
-          <CountryModal dForModal={this.props.d} ref={instance => { this.child = instance; }} />
+          <CountryModal id={this.props.id} dForModal={this.props.d} ref={instance => { this.child = instance; }} />
         </g>
         
     );

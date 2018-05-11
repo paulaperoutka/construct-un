@@ -3,7 +3,6 @@
 // <svg xmlns="http://www.w3.org/2000/svg" viewBox="-29.947200 60.986600 2754.066400 1396.573900" version={1.0} height="1396.573900" width="2754.066400" id="svg1926" {...props}>
 import React from 'react';
 import Path from './Path'
-import CountryModal from '../CountryModal/CountryModal';
 class World extends React.Component {
 
  componentDidMount() {
