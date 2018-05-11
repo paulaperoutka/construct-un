@@ -32,12 +32,12 @@ class CountryModal extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>{this.props.id}</ModalHeader>
           <ModalBody>
+          <div>Sample Country Data</div>
           <svg preserveAspectRatio="true" xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0}>
               <path id={this.props.id} d={this.props.dForModal} style={{fill: '#b9b9b9'}}   />
             </svg>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
