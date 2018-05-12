@@ -14,13 +14,19 @@ class ChambersPage extends Component {
 
 	render() {
 		return(
-			<div className="wrapper">
+			<div className="page-wrapper">
 				<Navbar />
 				<Container>
-					<Newsfeed />
-					<World />
-					<Chambers />
-					<Chat />
+					<Row>
+						<Col md="4">
+							<Newsfeed />
+						</Col>
+						<Col md="8">
+							<World />
+							<Chambers />
+							<Chat />
+						</Col>
+					</Row>
 				</Container>
 		   </div>
 // 				<Row>

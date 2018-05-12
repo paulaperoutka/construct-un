@@ -1,0 +1,13 @@
+/*.chambers-wrapper {
+	border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+}*/
+
+#svg8 {
+	object-fit: cover;
+	border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  max-width: 100%;
+}
