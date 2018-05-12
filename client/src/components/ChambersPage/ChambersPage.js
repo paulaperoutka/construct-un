@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 // import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container } from "reactstrap";
 import Navbar from "../Navbar";
 import Newsfeed from '../Newsfeed';
 import World from '../Map';
@@ -16,10 +17,12 @@ class ChambersPage extends Component {
 		return(
 			<div className="wrapper">
 				<Navbar />
-				<Newsfeed />
-				<World />
-				<Chambers />
-				<Chat />
+				<Container>
+					<Newsfeed />
+					<World />
+					<Chambers />
+					<Chat />
+				</Container>
 		   </div>
 		);
 	}
