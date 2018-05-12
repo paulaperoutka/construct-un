@@ -1,4 +1,11 @@
 body {
 	background-color: black;
+	background-image: none;
 	color: white;
 }
+
+.page-wrapper {
+	margin-top: 300px;
+}
+
+

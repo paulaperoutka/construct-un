@@ -8,10 +8,11 @@ import {
   CarouselCaption,
   Button,
   CardBody,
-  Card, 
+  Card,
   Collapse,
   Row,
   Col
+
 } from "reactstrap";
 import "./Newsfeed.css";
 
@@ -72,7 +73,7 @@ class Newsfeed extends React.Component {
 	render() {
     const { activeIndex } = this.state;
 
-    const slides = items.map(item => {
+    const slides = items.map((item) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -106,7 +107,7 @@ class Newsfeed extends React.Component {
     return (
       <Row>
         <Col>
-          <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
+          <Button outline color="warning" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
           <Collapse isOpen={this.state.collapse}>
             <Card className="newsfeed">
               <CardBody>

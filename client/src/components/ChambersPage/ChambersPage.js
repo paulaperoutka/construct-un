@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText, Row, Col, Container } from 'reactstrap';
+import Navbar from "../Navbar";
 import Newsfeed from '../Newsfeed';
 import World from '../Map';
 import Chambers from '../Chambers';
@@ -13,22 +14,36 @@ class ChambersPage extends Component {
 
 	render() {
 		return(
-			<div className="wrapper">
-				<Row>
-					<Col xs="4">
-						<Newsfeed />
-					</Col>
-					<Col xs="8">
-						<Row>
+			<div className="page-wrapper">
+				<Navbar />
+				<Container>
+					<Row>
+						<Col md="4">
+							<Newsfeed />
+						</Col>
+						<Col md="8">
 							<World />
-						</Row>
-						<Row>
 							<Chambers />
-						</Row>
-					</Col>
-				</Row>
-					<Chat />
-		  </div>
+							<Chat />
+						</Col>
+					</Row>
+				</Container>
+		   </div>
+// 				<Row>
+// 					<Col xs="4">
+// 						<Newsfeed />
+// 					</Col>
+// 					<Col xs="8">
+// 						<Row>
+// 							<World />
+// 						</Row>
+// 						<Row>
+// 							<Chambers />
+// 						</Row>
+// 					</Col>
+// 				</Row>
+// 					<Chat />
+// 		  </div>
 		);
 	}
 }

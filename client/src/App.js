@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// <<<<<<< HEAD
 // import {BrowserRouter as Router, Route} from "react-router-dom";
 // import { 
 //   Container, 
@@ -23,17 +22,12 @@ import React, { Component } from 'react';
 // import Chambers from './components/Chambers';
 // import Chat from './components/Chat';
 // import Newsfeed from "./components/News";
-// =======
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Portal from "./components/Portal";
 import ChambersPage from "./components/ChambersPage";
-import ScenarioPage from "./components/ScenarioPage";
-
-import { Container } from "reactstrap";
 import './App.css';
-// >>>>>>> upstream/master
 
 class App extends Component {
 
@@ -54,7 +48,6 @@ class App extends Component {
 
   render() {
     return (
-// <<<<<<< HEAD
 //       <div className="App">
 
 //         <Navbar className="App-header" expand="md">
@@ -123,13 +116,11 @@ class App extends Component {
 // }
 
 // export default App;
-// =======
       <Router>
-        <Container>
+        <div>
           <Route exact path="/" component={Portal} />
           <Route exact path="/securitycouncil" component={ChambersPage} />
-          <Route exact path="/scenarios" component={ScenarioPage} />
-        </Container>
+        </div>
       </Router>
     );
   }
@@ -137,6 +128,3 @@ class App extends Component {
 
 export default App;
 
-
-
-// >>>>>>> upstream/master
