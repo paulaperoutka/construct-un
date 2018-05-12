@@ -124,10 +124,10 @@ class App extends Component {
 // export default App;
 // =======
       <Router>
-        <Container>
+        <div>
           <Route exact path="/" component={Portal} />
           <Route exact path="/securitycouncil" component={ChambersPage} />
-        </Container>
+        </div>
       </Router>
     );
   }

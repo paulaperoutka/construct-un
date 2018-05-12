@@ -1,0 +1,13 @@
+.navbar {
+	width: 100%;
+	background-color: black;
+	padding-left: -5px;
+}
+
+.wrapper {
+	margin: 0;
+}
+
+#un-two {
+	width: 25%;
+}
