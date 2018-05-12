@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Container } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input, FormText, Row, Col, Container } from 'reactstrap';
 import Navbar from "../Navbar";
 import Newsfeed from '../Newsfeed';
 import World from '../Map';
@@ -24,6 +23,21 @@ class ChambersPage extends Component {
 					<Chat />
 				</Container>
 		   </div>
+// 				<Row>
+// 					<Col xs="4">
+// 						<Newsfeed />
+// 					</Col>
+// 					<Col xs="8">
+// 						<Row>
+// 							<World />
+// 						</Row>
+// 						<Row>
+// 							<Chambers />
+// 						</Row>
+// 					</Col>
+// 				</Row>
+// 					<Chat />
+// 		  </div>
 		);
 	}
 }

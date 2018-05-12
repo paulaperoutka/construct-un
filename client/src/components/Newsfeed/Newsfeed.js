@@ -8,8 +8,11 @@ import {
   CarouselCaption,
   Button,
   CardBody,
-  Card, 
-  Collapse
+  Card,
+  Collapse,
+  Row,
+  Col
+
 } from "reactstrap";
 import "./Newsfeed.css";
 
@@ -77,32 +80,52 @@ class Newsfeed extends React.Component {
           onExited={this.onExited}
           key={item.imageLink}
         >
-          <img src={item.imageLink} alt="*" />
-          <CarouselCaption captionText={item.title} captionHeader={item.title} />
+          <Row>
+            <Col>
+              <h3>{item.title}</h3>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <img src={item.imageLink} alt="*" />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p className="author">{item.imageAuthor}</p>
+            </Col>
+          </Row>
+          <Row>  
+            <Col>
+              <p>{item.summary}</p>
+            </Col>
+          </Row>
         </CarouselItem>
       );
     });
 
     return (
-      <div>
-        <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
-        <Collapse isOpen={this.state.collapse}>
-          <Card>
-            <CardBody>
-              <Carousel
-                activeIndex={activeIndex}
-                next={this.next}
-                previous={this.previous}
-              >
-                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-                {slides}
-                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-              </Carousel>
-            </CardBody>
-          </Card>
-        </Collapse>
-      </div>
+      <Row>
+        <Col>
+          <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
+          <Collapse isOpen={this.state.collapse}>
+            <Card className="newsfeed">
+              <CardBody>
+                <Carousel
+                  activeIndex={activeIndex}
+                  next={this.next}
+                  previous={this.previous}
+                >
+{/*                  <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />*/}
+                  {slides}
+                  <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                  <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+                </Carousel>
+              </CardBody>
+            </Card>
+          </Collapse>
+        </Col>
+      </Row>
     );
   }
 

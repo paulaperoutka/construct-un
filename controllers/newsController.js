@@ -22,7 +22,7 @@ module.exports = {
 
 			axios
 				.get("https://news.un.org/en/news/region/" + region)
-				.then((page) => {
+				.then(page => {
 
 					const $ = cheerio.load(page.data);
 
@@ -42,8 +42,8 @@ module.exports = {
 						if(result.title) {
 							db.NewsArticle
 								.create(result)
-								.then((dbNewsArt) => console.log(dbNewsArt))
-								.catch((err) => console.log(err));
+								.then(dbNewsArt => console.log(dbNewsArt))
+								.catch(err => console.log(err));
 						}
 
 					});
@@ -51,16 +51,16 @@ module.exports = {
 					console.log("Articles scraped" + region);
 
 				})
-				.catch((err) => {
-					res.json(err);
-					console.log(err);
-				});
+				.catch(err => res.json(err));
 
 		}
 
 		const regions = ["africa", "americas", "asia-pacific", "middle-east", "europe"];
 
-		db.NewsArticle.remove({}, regions.forEach((region) => sectionScrape(region)));
+		db.NewsArticle
+			.remove({})
+			.then(regions.forEach(region => sectionScrape(region)))
+			.catch(err => console.log(err));
 
 		res.send("Articles scraped from https://news.un.org");
 
