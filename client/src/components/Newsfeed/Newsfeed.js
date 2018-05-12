@@ -8,10 +8,11 @@ import {
   CarouselCaption,
   Button,
   CardBody,
-  Card, 
+  Card,
   Collapse,
   Row,
   Col
+
 } from "reactstrap";
 import "./Newsfeed.css";
 

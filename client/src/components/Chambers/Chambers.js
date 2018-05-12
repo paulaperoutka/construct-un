@@ -4,8 +4,7 @@ import React from 'react';
 import Path from '../Map/Path'
 class Chambers extends React.Component {
 
-  
-
+ 
 
 
   render() {

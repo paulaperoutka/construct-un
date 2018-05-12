@@ -1,0 +1,14 @@
+.navbar {
+	width: 100%;
+	background-color: black;
+	padding-left: -5px;
+	position: fixed;
+}
+
+.wrapper {
+	margin: 0;
+}
+
+#un-two {
+	width: 25%;
+}

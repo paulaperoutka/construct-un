@@ -16,8 +16,6 @@ class World extends React.Component {
  }
 render() {
   return (
-
-
     <div>
       <svg className="world" width={800} height={400} version={1.0} id="svg204">
       <g className="land" id="Countries" style={{fill: '#fefee9', fillOpacity: 1, fillRule: 'nonzero', stroke: '#646464', strokeWidth: 1, strokeMiterlimit: 1}} transform="translate(0.98551468,36.464043)">
@@ -240,7 +238,7 @@ render() {
         </g>
       </g>
     </svg>
-    </div>
+   </div>
 
     )
   }
