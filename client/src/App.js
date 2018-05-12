@@ -27,6 +27,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Portal from "./components/Portal";
 import ChambersPage from "./components/ChambersPage";
+import ScenarioPage from "./components/ScenarioPage";
 import './App.css';
 
 class App extends Component {
@@ -120,6 +121,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Portal} />
           <Route exact path="/securitycouncil" component={ChambersPage} />
+          <Route exact path="/scenarios" component={ScenarioPage} />
         </div>
       </Router>
     );
