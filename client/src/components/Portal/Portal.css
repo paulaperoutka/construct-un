@@ -1,22 +1,29 @@
-body {
+html {
+	background-color: black;
+}
+
+.portal-wrapper {
   background-image: url("https://i.ytimg.com/vi/T8-YdgU-CF4/maxresdefault.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100%;
+  /*background-height: 100%;*/
+  margin-left: 28px;
+
 }
 
-h1 {
-	font-size: 100px;
+.portal-header {
+	font-size: 600%;
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 70px;
+	color: white;
 }
 
 .form-group {
 	text-align: center;
-	margin-top: 400px;
+	margin-top: 700px;
 }
 
 .form-text {
 	font-size: 24px;
-
 }
