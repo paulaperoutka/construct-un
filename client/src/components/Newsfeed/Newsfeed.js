@@ -107,7 +107,7 @@ class Newsfeed extends React.Component {
     return (
       <Row>
         <Col>
-          <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
+          <Button outline color="warning" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
           <Collapse isOpen={this.state.collapse}>
             <Card className="newsfeed">
               <CardBody>
