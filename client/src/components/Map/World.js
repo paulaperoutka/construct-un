@@ -7,10 +7,7 @@ import './World.css'
 
 class World extends React.Component {
 
- componentDidMount() {
-
- } 
-  
+ 
  onMouseOver = () => {
    this.child.highlight()
  }
