@@ -48,78 +48,11 @@ class App extends Component {
 
   render() {
     return (
-//       <div className="App">
-
-//         <Navbar className="App-header" expand="md">
-//           <img src={logo} className="App-logo" alt="logo" />
-//           <NavbarBrand href="/" className="App-title">Welcome to Construct UN</NavbarBrand>
-//           <Collapse isOpen={this.state.isOpen} navbar>
-//             <Nav className="ml-auto" navbar>
-//               <NavItem>
-//                 <NavLink href="/components/">Link1</NavLink>
-//               </NavItem>
-//               <NavItem>
-//                 <NavLink href="*">Link2</NavLink>
-//               </NavItem>
-//               <UncontrolledDropdown nav inNavbar>
-//                 <DropdownToggle nav caret>
-//                   Options
-//                 </DropdownToggle>
-//                 <DropdownMenu right>
-//                   <DropdownItem>
-//                     Option 1
-//                   </DropdownItem>
-//                   <DropdownItem>
-//                     Option 2
-//                   </DropdownItem>
-//                   <DropdownItem divider />
-//                   <DropdownItem>
-//                     Reset
-//                   </DropdownItem>
-//                 </DropdownMenu>
-//               </UncontrolledDropdown>
-//             </Nav>
-//           </Collapse>
-//         </Navbar>
-
-//         <Container>
-
-//           <Row>
-//             <Col xs="auto">
-//               <Newsfeed />
-//             </Col>
-//           </Row>
-
-//           <Row>
-//             <Col xs="auto">
-//               <World />
-//             </Col>
-//           </Row>
-
-//           <Row>
-//             <Col xs="auto">
-//               <Chambers />
-//             </Col>
-//           </Row>
-
-//           <Row>
-//             <Col xs="auto">
-//               <Chat />
-//             </Col>
-//           </Row>
-
-//         </Container>
-
-//       </div>
-//     )
-//   }
-// }
-
-// export default App;
       <Router>
         <div>
           <Route exact path="/" component={Portal} />
           <Route exact path="/securitycouncil" component={ChambersPage} />
+          <Route exact path="/resolution" component={ResolutionsPage} />
         </div>
       </Router>
     );
