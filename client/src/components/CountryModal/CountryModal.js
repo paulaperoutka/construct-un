@@ -42,8 +42,6 @@ class CountryModal extends React.Component {
   render() {
     return (
       <foreignObject>
-        
-        
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-container">
           <ModalHeader toggle={this.toggle}>{this.props.id}</ModalHeader>
           <ModalBody>
@@ -60,7 +58,7 @@ class CountryModal extends React.Component {
           ) : (
             <h3>No Results to Display</h3>
           )}
-          <svg preserveAspectRatio="true" xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0}>
               <path id={this.props.id} d={this.props.dForModal} style={{fill: '#b9b9b9'}}   />
             </svg>
           </ModalBody>
