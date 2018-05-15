@@ -1,4 +1,5 @@
 module.exports = {
 	newsAPI: require("./newsAPI"),
-	countriesAPI: require("./countriesAPI")
+	countriesAPI: require("./countriesAPI"),
+	loginApi: require("./loginApi")
 }

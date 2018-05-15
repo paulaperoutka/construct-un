@@ -3,8 +3,9 @@ const
 	bodyParser = require("body-parser"),
 	mongoose = require("mongoose"),
 	routes = require("./routes"),
-	path = require("path");
-
+  path = require("path"),
+  passport = require('passport');
+  config = require('./config');
 const 
 	PORT = process.env.PORT || 3001,
 	app = express();
@@ -15,10 +16,29 @@ app.use(bodyParser.json());
 if(process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+// pass the passport middleware
+app.use(passport.initialize());
+
+// load passport strategies
+const localSignupStrategy = require('./passport/local-signup');
+const localLoginStrategy = require('./passport/local-login');
+passport.use('local-signup', localSignupStrategy);
+passport.use('local-login', localLoginStrategy);
+
+// pass the authenticaion checker middleware
+const authCheckMiddleware = require('./middleware/auth-check');
+app.use('/api', authCheckMiddleware);
+
+// authentication routes
+const authRoutes = require('./routes/auth');
+const apiRoutes = require('./routes/loginApi');
+app.use('/auth', authRoutes);
+app.use('/api', apiRoutes);
 
 app.use("/api/news", routes.newsAPI);
 // app.use("/api/resolution", routes.resolutionAPI);
 
+//countries api route
 app.use("/api/countries", routes.countriesAPI);
 
 app.get("*", function(req, res) {

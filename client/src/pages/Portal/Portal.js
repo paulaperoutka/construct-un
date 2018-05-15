@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import "./Portal.css";
+import Main from '../../components/auth/Main';
+// C:\xprojects\construct-un\client\src\components\auth\Main.js
 
 class Portal extends Component {
 	state = {
@@ -10,6 +12,7 @@ class Portal extends Component {
 	render() {
 		return(
 			<div className="portal-wrapper">
+				<Main />
 				<Row>
 					<Col md="2" />
 					<Col md="8">

@@ -42,25 +42,23 @@ class CountryModal extends React.Component {
   render() {
     return (
       <foreignObject>
-        
-        
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-container">
           <ModalHeader toggle={this.toggle}>{this.props.id}</ModalHeader>
           <ModalBody>
-            <img alt="no flag" href={this.state.data.flag}/>
+            <img  src={this.state.data.flag} style={{width:'50px'}} alt="no flag"/>
           {this.state.data ? (
             <ul>
               <li>Capital City: {this.state.data.capital}</li>
-              <li>{this.state.data.officialLanguage}</li>
+              <li>Official Language: {this.state.data.officialLanguage}</li>
               <li>{this.state.data.flag}</li>
-              <li>{this.state.data.area}</li>
-              <li>{this.state.data.population}</li>
-              <li>{this.state.data.currency}</li>
+              <li>Area: {this.state.data.area} km<sup>2</sup></li>
+              <li>Population: {this.state.data.population}</li>
+              <li>Currency{this.state.data.currency}</li>
             </ul>
           ) : (
             <h3>No Results to Display</h3>
           )}
-          <svg preserveAspectRatio="true" xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0}>
               <path id={this.props.id} d={this.props.dForModal} style={{fill: '#b9b9b9'}}   />
             </svg>
           </ModalBody>
