@@ -5,7 +5,7 @@ import Newsfeed from '../../components/Newsfeed';
 import World from '../../components/Map';
 import Resolution from '../../components/Resolution';
 import Chat from '../../components/Chat';
-import "./ChambersPage.css";
+import "./ResolutionsPage.css";
 
 class ChambersPage extends Component {
 	state = {
