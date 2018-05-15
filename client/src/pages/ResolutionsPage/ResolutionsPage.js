@@ -5,9 +5,9 @@ import Newsfeed from '../../components/Newsfeed';
 import World from '../../components/Map';
 import Resolution from '../../components/Resolution';
 import Chat from '../../components/Chat';
-import "./ChambersPage.css";
+import "./ResolutionsPage.css";
 
-class ChambersPage extends Component {
+class ResolutionsPage extends Component {
 	state = {
 		country: []
 	}
@@ -33,4 +33,4 @@ class ChambersPage extends Component {
 	}
 }
 
-export default ChambersPage;
+export default ResolutionsPage;
