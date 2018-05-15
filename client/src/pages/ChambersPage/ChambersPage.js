@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col, Container } from 'reactstrap';
-import Navbar from "../Navbar";
-import Newsfeed from '../Newsfeed';
-import World from '../Map';
-import Chambers from '../Chambers';
-import Chat from '../Chat';
+import Navbar from "../../components/Navbar";
+import Newsfeed from '../../components/Newsfeed';
+import World from '../../components/Map';
+import Chambers from '../../components/Chambers';
+import Chat from '../../components/Chat';
 import "./ChambersPage.css";
 
 class ChambersPage extends Component {

@@ -73,7 +73,7 @@ class Newsfeed extends React.Component {
 	render() {
     const { activeIndex } = this.state;
 
-    const slides = items.map((item) => {
+    const slides = items.map(item => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
