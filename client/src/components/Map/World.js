@@ -7,11 +7,7 @@ import './World.css'
 
 class World extends React.Component {
 
-  constructor(props) {
-    super(props)
-    
-    
-  }
+  
  onMouseOver = () => {
    this.child.highlight()
  }

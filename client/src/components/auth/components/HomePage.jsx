@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTitle, CardText } from 'material-ui/Card';
+import { Card, CardText } from 'material-ui/Card';
 import Auth from '../modules/Auth';
 
 class HomePage extends React.Component {
@@ -12,7 +12,6 @@ class HomePage extends React.Component {
   render() {
     return (
       <Card className="container">
-        <CardTitle title="React Application" subtitle="This is the home page." />
           {Auth.isUserAuthenticated() ? (
             <CardText style={{ fontSize: '16px', color: 'green' }}>Welcome! You are logged in.</CardText>
           ) : (
