@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import routes from './routes.js';
-import { Button } from 'reactstrap';
+import RaisedButton from 'material-ui/RaisedButton'
 
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Redirect,
-  withRouter
+  
 } from 'react-router-dom'
 
-import Base from './components/Base.jsx';
+
 import HomePage from './components/HomePage.jsx';
 import LoginPage from './containers/LoginPage.jsx';
 import LogoutFunction from './containers/LogoutFunction.jsx';
@@ -89,10 +88,10 @@ class Main extends Component {
                 <div className="top-bar-right">
                   
                     <Link to="/login">
-                      <Button>Log in</Button>
+                      <RaisedButton fullWidth={true}>Log in</RaisedButton>
                     </Link>
                     <Link to="/signup">
-                      <Button>Sign up</Button>
+                      <RaisedButton fullWidth={true}>Sign up</RaisedButton>
                     </Link>
                   
                 </div>
