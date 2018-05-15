@@ -1,19 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Card, CardTitle, CardText } from 'material-ui/Card';
-
-const Dashboard = ({ secretData, user }) => (
+import { Card } from 'material-ui/Card';
+import { Label, Input, FormText } from 'reactstrap';
+import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
+const Dashboard = ({ user }) => (
   <Card className="container">
-    <CardTitle
-      title="Dashboard"
-      subtitle="You should get access to this page only after authentication."
-    />
-  {secretData && <CardText style={{ fontSize: '16px', color: 'green' }}>Welcome <strong>{user.name}</strong>!<br />{secretData}</CardText>}
+    <FormText>
+			            Welcome Ambassador {user.name}. Please select the country you represent.
+			          </FormText>
+			          <br />
+			          <Label for="country-select">UN Member Nations</Label>
+			          <Input type="select" name="select" id="country-select">
+			            <option>United States of America</option>
+			            <option>Russia</option>
+			            <option>United Kingdom</option>
+			            <option>China</option>
+			            <option>France</option>
+			          </Input>
+			          <br />
+			          <RaisedButton fullWidth={true}>Enter the UN</RaisedButton>
   </Card>
 );
-
-Dashboard.propTypes = {
-  secretData: PropTypes.string.isRequired
-};
 
 export default Dashboard;

@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import routes from './routes.js';
+import RaisedButton from 'material-ui/RaisedButton'
 
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Redirect,
-  withRouter
+  
 } from 'react-router-dom'
 
-import Base from './components/Base.jsx';
+
 import HomePage from './components/HomePage.jsx';
 import LoginPage from './containers/LoginPage.jsx';
 import LogoutFunction from './containers/LogoutFunction.jsx';
@@ -79,18 +79,25 @@ class Main extends Component {
         <Router>
           <div>
             <div className="top-bar">
-              <div className="top-bar-left">
-                <Link to="/">React App</Link>
-              </div>
               {this.state.authenticated ? (
                 <div className="top-bar-right">
-                  <Link to="/dashboard">Dashboard</Link>
-                  <Link to="/logout">Log out</Link>
+                  <Link to="/dashboard">
+                    <RaisedButton fullWidth={true}>Country Select</RaisedButton>
+                  </Link>
+                  <Link to="/logout">
+                    <RaisedButton fullWidth={true}>Log Out</RaisedButton>
+                  </Link>
                 </div>
               ) : (
                 <div className="top-bar-right">
-                  <Link to="/login">Log in</Link>
-                  <Link to="/signup">Sign up</Link>
+                  
+                    <Link to="/login">
+                      <RaisedButton fullWidth={true}>Log in</RaisedButton>
+                    </Link>
+                    <Link to="/signup">
+                      <RaisedButton fullWidth={true}>Sign up</RaisedButton>
+                    </Link>
+                  
                 </div>
               )}
 
