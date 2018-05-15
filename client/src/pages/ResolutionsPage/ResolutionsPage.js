@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col, Container } from 'reactstrap';
-import Navbar from "../Navbar";
-import Newsfeed from '../Newsfeed';
-import World from '../Map';
-import Chambers from '../Chambers';
-import Chat from '../Chat';
+import Navbar from "../../components/Navbar";
+import Newsfeed from '../../components/Newsfeed';
+import World from '../../components/Map';
+import Resolution from '../../components/Resolution';
+import Chat from '../../components/Chat';
 import "./ChambersPage.css";
 
 class ChambersPage extends Component {
@@ -23,27 +23,12 @@ class ChambersPage extends Component {
 						</Col>
 						<Col md="8">
 							<World />
-							<Chambers />
+							<Resolution />
 							<Chat />
 						</Col>
 					</Row>
 				</Container>
 		   </div>
-// 				<Row>
-// 					<Col xs="4">
-// 						<Newsfeed />
-// 					</Col>
-// 					<Col xs="8">
-// 						<Row>
-// 							<World />
-// 						</Row>
-// 						<Row>
-// 							<Chambers />
-// 						</Row>
-// 					</Col>
-// 				</Row>
-// 					<Chat />
-// 		  </div>
 		);
 	}
 }
