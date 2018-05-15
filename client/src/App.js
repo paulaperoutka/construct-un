@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Portal from "./components/Portal";
-import ChambersPage from "./components/ChambersPage";
+import Portal from "./pages/Portal";
+import ChambersPage from "./pages/ChambersPage";
 import ResolutionsPage from "./pages/ResolutionsPage";
 import ScenarioPage from "./components/ScenarioPage";
 
