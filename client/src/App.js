@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-<<<<<<< HEAD
 import Portal from "./components/Portal";
 import ChambersPage from "./components/ChambersPage";
-import ScenarioPage from "./components/ScenarioPage";
-=======
-import Portal from "./pages/Portal";
-import ChambersPage from "./pages/ChambersPage";
 import ResolutionsPage from "./pages/ResolutionsPage";
->>>>>>> upstream/master
+import ScenarioPage from "./components/ScenarioPage";
+
 import './App.css';
 
 class App extends Component {
