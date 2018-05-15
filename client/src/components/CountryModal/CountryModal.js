@@ -1,11 +1,14 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import axios from "axios";
+import './CountryModal.css'
 
 class CountryModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      data: []
     
     };
      
@@ -18,7 +21,18 @@ class CountryModal extends React.Component {
 
   componentDidMount() {
     this.box = [this.bound(this.props.id).x, this.bound(this.props.id).y, this.bound(this.props.id).width, this.bound(this.props.id).height]
-  }
+    
+    axios.get("/api/countries/" + this.props.id)
+      .then(res => {
+        if(res.data.length) {
+        this.setState({
+          data: res.data[0]
+      })
+    console.log(this.state.data)
+    // console.log(this.state.data.country)
+  }})
+  } 
+  
   toggle() {
     this.setState({
       modal: !this.state.modal
@@ -29,10 +43,23 @@ class CountryModal extends React.Component {
     return (
       <foreignObject>
         
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-container">
           <ModalHeader toggle={this.toggle}>{this.props.id}</ModalHeader>
           <ModalBody>
-          <div>Sample Country Data</div>
+            <img alt="no flag" href={this.state.data.flag}/>
+          {this.state.data ? (
+            <ul>
+              <li>Capital City: {this.state.data.capital}</li>
+              <li>{this.state.data.officialLanguage}</li>
+              <li>{this.state.data.flag}</li>
+              <li>{this.state.data.area}</li>
+              <li>{this.state.data.population}</li>
+              <li>{this.state.data.currency}</li>
+            </ul>
+          ) : (
+            <h3>No Results to Display</h3>
+          )}
           <svg preserveAspectRatio="true" xmlns="http://www.w3.org/2000/svg" viewBox={this.box} version={1.0}>
               <path id={this.props.id} d={this.props.dForModal} style={{fill: '#b9b9b9'}}   />
             </svg>

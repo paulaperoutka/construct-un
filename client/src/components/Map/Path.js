@@ -1,5 +1,6 @@
 import React from 'react';
-import CountryModal from '../CountryModal/CountryModal';
+
+
 
 class Path extends React.Component {
   constructor(props) {
@@ -9,13 +10,15 @@ class Path extends React.Component {
       style: {
         fill: '#b9b9b9',
         fillOpacity: 1,
-        
-
       }
+      
     }
     
   }
 
+  
+    
+    
   
 highlight = () => {
    
@@ -47,9 +50,9 @@ render() {
           style={this.state.style}
           onMouseOver={this.highlight}
           onMouseOut={this.deHighlight}
-          onClick={() => { this.child.toggle();}}
+          onClick={this.props.onClick}
           />
-          <CountryModal id={this.props.id} dForModal={this.props.d} ref={instance => { this.child = instance; }} />
+          
         </g>
         
     );

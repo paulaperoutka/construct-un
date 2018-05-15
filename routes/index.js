@@ -1,3 +1,4 @@
 module.exports = {
-	newsAPI: require("./newsAPI")
+	newsAPI: require("./newsAPI"),
+	countriesAPI: require("./countriesAPI")
 }
