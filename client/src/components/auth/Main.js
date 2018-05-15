@@ -81,8 +81,12 @@ class Main extends Component {
             <div className="top-bar">
               {this.state.authenticated ? (
                 <div className="top-bar-right">
-                  <Link to="/dashboard">Dashboard</Link>
-                  <Link to="/logout">Log out</Link>
+                  <Link to="/dashboard">
+                    <RaisedButton fullWidth={true}>Country Select</RaisedButton>
+                  </Link>
+                  <Link to="/logout">
+                    <RaisedButton fullWidth={true}>Log Out</RaisedButton>
+                  </Link>
                 </div>
               ) : (
                 <div className="top-bar-right">

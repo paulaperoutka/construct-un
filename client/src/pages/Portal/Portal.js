@@ -20,20 +20,6 @@ class Portal extends Component {
 						<Form className="portal-content">
 							<FormGroup>
 								<Main />
-								<FormText>
-			            Welcome Ambassador. Please select the country you represent.
-			          </FormText>
-			          <br />
-			          <Label for="country-select">UN Member Nations</Label>
-			          <Input type="select" name="select" id="country-select">
-			            <option>United States of America</option>
-			            <option>Russia</option>
-			            <option>United Kingdom</option>
-			            <option>China</option>
-			            <option>France</option>
-			          </Input>
-			          <br />
-			          <Button>Enter the UN</Button>
 				      </FormGroup>
 				    </Form>
 				  </Col>
