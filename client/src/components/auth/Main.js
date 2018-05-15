@@ -3,6 +3,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // import routes from './routes.js';
+import { Button } from 'reactstrap';
 
 import {
   BrowserRouter as Router,
@@ -79,9 +80,6 @@ class Main extends Component {
         <Router>
           <div>
             <div className="top-bar">
-              <div className="top-bar-left">
-                <Link to="/">React App</Link>
-              </div>
               {this.state.authenticated ? (
                 <div className="top-bar-right">
                   <Link to="/dashboard">Dashboard</Link>
@@ -89,8 +87,14 @@ class Main extends Component {
                 </div>
               ) : (
                 <div className="top-bar-right">
-                  <Link to="/login">Log in</Link>
-                  <Link to="/signup">Sign up</Link>
+                  
+                    <Link to="/login">
+                      <Button>Log in</Button>
+                    </Link>
+                    <Link to="/signup">
+                      <Button>Sign up</Button>
+                    </Link>
+                  
                 </div>
               )}
 
