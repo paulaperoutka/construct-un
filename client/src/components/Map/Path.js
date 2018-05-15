@@ -50,8 +50,7 @@ render() {
           style={this.state.style}
           onMouseOver={this.highlight}
           onMouseOut={this.deHighlight}
-          onClick={() => { this.child.toggle();}}
-
+          onClick={this.props.onClick}
           />
           
         </g>
