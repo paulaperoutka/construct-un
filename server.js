@@ -10,6 +10,8 @@ const
 	PORT = process.env.PORT || 3001,
 	app = express();
 
+process.setMaxListeners(Infinity);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -36,10 +38,10 @@ app.use('/auth', authRoutes);
 app.use('/apiAuth', apiRoutes);
 
 app.use("/api/news", routes.newsAPI);
-// app.use("/api/resolution", routes.resolutionAPI);
-
 //countries api route
 app.use("/api/countries", routes.countriesAPI);
+
+app.use("/api/resolutions", routes.resolutionAPI);
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

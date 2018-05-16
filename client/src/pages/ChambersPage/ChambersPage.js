@@ -19,35 +19,18 @@ class ChambersPage extends Component {
 				<Navbar />
 				<Container>
 					<Row>
-						<VideoPlayer />
-					</Row>
-					<Row>
 						<Col md="4">
 							<Newsfeed />
+							<VideoPlayer />
+							<Chat />
 						</Col>
 						<Col md="8">
 							<World />
 							<Chambers />
-							<Chat />
 						</Col>
 					</Row>
 				</Container>
 		   </div>
-// 				<Row>
-// 					<Col xs="4">
-// 						<Newsfeed />
-// 					</Col>
-// 					<Col xs="8">
-// 						<Row>
-// 							<World />
-// 						</Row>
-// 						<Row>
-// 							<Chambers />
-// 						</Row>
-// 					</Col>
-// 				</Row>
-// 					<Chat />
-// 		  </div>
 		);
 	}
 }

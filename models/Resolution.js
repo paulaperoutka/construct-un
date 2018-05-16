@@ -3,22 +3,22 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const resolutionSchema = new Schema ({
-	title: {
+	memberNation: {
 		type: String,
 		required:true
 	},
-	author: {
+	resolutionTitle: {
 		type: String,
 		required: true
 	},
-	sponsoringStates: {
+	sponsoringState: {
 		type: String,
 	},
 	objective: {
 		type: String, 
 		required: true
 	},
-	proposalBody: {
+	proposal: {
 		type: String, 
 		required: true
 	}
