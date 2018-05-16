@@ -4,6 +4,15 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Alert, Button, Card, Col, Container, Form, FormGroup, FormText, Input, Jumbotron, Label, Row, Text } from "reactstrap";
 
+const initialState = {
+    memberNation: "",
+		resolutionTitle: "",
+		sponsoringNation: "",
+		objective: "",
+		proposal: "",
+		isValid: true
+};
+
 class CreateResolution extends Component {
 
 	state = {
@@ -28,7 +37,8 @@ class CreateResolution extends Component {
 	        isValid: true
 	      });
 	      axios.post("/api/resolutions", this.state)
-	        .then(res => this.props.history.push("/"))
+	      	.then(res => this.setState(initialState))
+	        // .then(res => this.props.history.push("/"))
 	        .catch(err => console.log(err));
 	    }
     else {
@@ -84,7 +94,7 @@ class CreateResolution extends Component {
 			          <br />
 				        { !this.state.isValid && (
 				            <Alert color="danger">
-				              Resolution must be complete before submission accepted.
+				              Resolution must be complete before submission is accepted.
 				            </Alert>
 				          )
 				        }
