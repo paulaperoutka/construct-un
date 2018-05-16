@@ -60,9 +60,9 @@ class CreateResolution extends Component {
 			            <h1>Propose A Resolution</h1>
 			          </Jumbotron>
 			          <form>
-			            <Input name="memberNation" placeholder="Nation (required)" />
-			            <Input name="resolutionTitle" placeholder="Resolution Title (required)" />
-			            <Input type="select" name="sponsoringState">
+			            <Input name="memberNation" value={this.state.memberNation} onChange={this.onChange} placeholder="Nation (required)" />
+			            <Input name="resolutionTitle" value={this.state.resolutionTitle} onChange={this.onChange} placeholder="Resolution Title (required)" />
+			            <Input type="select" name="sponsoringState" value={this.state.sponsoringState} onChange={this.onChange}>
 			            	<option>Sponsoring State (required)</option>
 			            	<option>United States of America</option>
 				            <option>Russia</option>
@@ -70,7 +70,7 @@ class CreateResolution extends Component {
 				            <option>China</option>
 				            <option>France</option>
 			            </Input>
-			            <Input type="select" name="objective">
+			            <Input type="select" name="objective" value={this.state.objective} onChange={this.onChange}>
 			            	<option>UN Objective (required)</option>
 				            <option>Maintain International Peace and Security</option>
 				            <option>Protect Human Rights</option>
@@ -78,7 +78,7 @@ class CreateResolution extends Component {
 				            <option>Promote Sustainable Development</option>
 				            <option>Uphold International Law</option>
 				          </Input>
-			          	<Input type="textarea" name="proposal" placeholder="Proposal (Optional)" />
+			          	<Input type="textarea" name="proposal" value={this.state.proposal} onChange={this.onChange} placeholder="Proposal (Optional)" />
 			            <Button onClick={this.onSubmit} color="info">Submit Resolution</Button>
 			          </form>
 			          <br />
