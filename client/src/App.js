@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Portal from "./pages/Portal";
 import ChambersPage from "./pages/ChambersPage";
 import ResolutionsPage from "./pages/ResolutionsPage";
-import ScenarioPage from "./components/ScenarioPage";
+import ScenarioPage from "./pages/ScenarioPage";
 
 import './App.css';
 
