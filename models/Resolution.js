@@ -11,7 +11,7 @@ const resolutionSchema = new Schema ({
 		type: String,
 		required: true
 	},
-	sponsoringState: {
+	sponsoringNation: {
 		type: String,
 	},
 	objective: {

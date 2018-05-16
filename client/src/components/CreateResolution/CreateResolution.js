@@ -9,7 +9,7 @@ class CreateResolution extends Component {
 	state = {
 		memberNation: "",
 		resolutionTitle: "",
-		sponsoringState: "",
+		sponsoringNation: "",
 		objective: "",
 		proposal: "",
 		isValid: true
@@ -23,14 +23,14 @@ class CreateResolution extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
-    if(this.state.memberNation && this.state.resolutionTitle && this.state.sponsoringState && this.state.objective && this.state.proposal) {
-      this.setState({
-        isValid: true
-      });
-      axios.post("/api/resolutions", this.state)
-        .then(res => this.props.history.push("/"))
-        .catch(err => console.log(err));
-    }
+    if(this.state.memberNation && this.state.resolutionTitle && this.state.sponsoringNation && this.state.objective && this.state.proposal) {
+	      this.setState({
+	        isValid: true
+	      });
+	      axios.post("/api/resolutions", this.state)
+	        .then(res => this.props.history.push("/"))
+	        .catch(err => console.log(err));
+	    }
     else {
       this.setState({
         isValid: false
@@ -62,8 +62,8 @@ class CreateResolution extends Component {
 			          <form>
 			            <Input name="memberNation" value={this.state.memberNation} onChange={this.onChange} placeholder="Nation (required)" />
 			            <Input name="resolutionTitle" value={this.state.resolutionTitle} onChange={this.onChange} placeholder="Resolution Title (required)" />
-			            <Input type="select" name="sponsoringState" value={this.state.sponsoringState} onChange={this.onChange}>
-			            	<option>Sponsoring State (required)</option>
+			            <Input type="select" name="sponsoringNation" value={this.state.sponsoringNation} onChange={this.onChange}>
+										<option>Sponsoring Nation (required)</option>
 			            	<option>United States of America</option>
 				            <option>Russia</option>
 				            <option>United Kingdom</option>
@@ -93,7 +93,7 @@ class CreateResolution extends Component {
 		      </Row>
 		    </Container>
 			</div>
-		);
+		)
 	}
 }
 
