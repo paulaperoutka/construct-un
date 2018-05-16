@@ -10,11 +10,14 @@
   "dependencies": {
     "bootstrap": "^4.1.1",
     "chance": "^1.0.16",
+    "material-ui": "^0.20.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-player": "^1.5.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
+    "react-tap-event-plugin": "^3.0.2",
     "reactstrap": "^6.0.1",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0"

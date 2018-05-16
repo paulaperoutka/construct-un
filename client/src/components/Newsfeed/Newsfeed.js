@@ -9,41 +9,32 @@ import {
   Button,
   CardBody,
   Card,
-  Collapse,
   Row,
   Col
 
 } from "reactstrap";
 import "./Newsfeed.css";
 
-let items = [];
-
 class Newsfeed extends React.Component {
 
-	componentDidMount() {
-		axios.get("/api/news")
-		.then(res => res.data
-      .forEach(item => items.push(item)))
-		.catch(err => console.log(err));
-	}
-
-	constructor(props) {
+  constructor(props) {
     super(props);
     this.state = { 
       activeIndex: 0,
-      collapse: false 
+      items: []
     };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
-    this.toggle = this.toggle.bind(this);
   }
 
-  toggle() {
-    this.setState({ collapse: !this.state.collapse });
-  }
+	componentDidMount() {
+		axios.get("/api/news")
+		.then(res => this.setState({ items: res.data }))
+		.catch(err => console.log(err));
+	}
 
   onExiting() {
     this.animating = true;
@@ -55,13 +46,13 @@ class Newsfeed extends React.Component {
 
   next() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+    const nextIndex = this.state.activeIndex === this.state.items.length - 1 ? 0 : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+    const nextIndex = this.state.activeIndex === 0 ? this.state.items.length - 1 : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
@@ -73,7 +64,7 @@ class Newsfeed extends React.Component {
 	render() {
     const { activeIndex } = this.state;
 
-    const slides = items.map((item) => {
+    const slides = this.state.items.map(item => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -107,23 +98,20 @@ class Newsfeed extends React.Component {
     return (
       <Row>
         <Col>
-          <Button outline color="warning" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Headlines</Button>
-          <Collapse isOpen={this.state.collapse}>
-            <Card className="newsfeed">
-              <CardBody>
-                <Carousel
-                  activeIndex={activeIndex}
-                  next={this.next}
-                  previous={this.previous}
-                >
+          <Card className="newsfeed">
+            <CardBody>
+              <Carousel
+                activeIndex={activeIndex}
+                next={this.next}
+                previous={this.previous}
+              >
 {/*                  <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />*/}
-                  {slides}
-                  <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-                  <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-                </Carousel>
-              </CardBody>
-            </Card>
-          </Collapse>
+                {slides}
+                <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+                <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+              </Carousel>
+            </CardBody>
+          </Card>
         </Col>
       </Row>
     );
