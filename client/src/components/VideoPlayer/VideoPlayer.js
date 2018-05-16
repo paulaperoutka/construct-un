@@ -6,8 +6,7 @@ class VideoPlayer extends Component {
 	render() {
 		return (
 			<div>
-				{console.log(ReactPlayer.canPlay("http://webtv.un.org/bd962187-e429-427b-894b-540860409297"), "can it play?")}
-				<ReactPlayer url="http://webtv.un.org/bd962187-e429-427b-894b-540860409297" playing />
+				<ReactPlayer url="https://bcliveunivsecure-lh.akamaihd.net/i/un150_1@575439/index_1328_av-b.m3u8?sd=10&rebase=on" playing controls />
 			</div>
 		)
 	}

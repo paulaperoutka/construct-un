@@ -19,13 +19,11 @@ class ChambersPage extends Component {
 				<Navbar />
 				<Container>
 					<Row>
+						<VideoPlayer />
+					</Row>
+					<Row>
 						<Col md="4">
-							<Row>
-								<VideoPlayer />
-							</Row>
-							<Row>
-								<Newsfeed />
-							</Row>
+							<Newsfeed />
 						</Col>
 						<Col md="8">
 							<World />
