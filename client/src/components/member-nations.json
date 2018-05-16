@@ -1,0 +1,779 @@
+// Member State & Date of Admission
+[
+	{
+		"state": "Afghanistan",
+		"date": "19-11-46"
+	},
+	{
+		"state": "Albania",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Algeria",
+		"date": "08-10-62"
+	},
+	{
+		"state": "Andorra",
+		"date": "28-07-93"
+	},
+	{
+		"state": "Angola",
+		"date": "01-12-76"
+	},
+	{
+		"state": "Antigua and Barbuda",
+		"date": "11-11-81"
+	},
+	{
+		"state": "Argentina",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Armenia",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Australia",
+		"date": "01-11-45"
+	},
+	{
+		"state": "Austria",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Azerbaijan",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Bahamas",
+		"date": "18-09-73"
+	},
+	{
+		"state": "Bahrain",
+		"date": "21-09-71"
+	},
+	{
+		"state": "Bangladesh",
+		"date": "17-09-74"
+	},
+	{
+		"state": "Barbados",
+		"date": "09-12-66"
+	},
+	{
+		"state": "Belarus",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Belgium",
+		"date": "27-12-45"
+	},
+	{
+		"state": "Belize",
+		"date": "25-09-81"
+	},
+	{
+		"state": "Benin",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Bhutan",
+		"date": "21-09-71"
+	},
+	{
+		"state": "Bolivia, Plurinational State of",
+		"date": "14-11-45"
+	},
+	{
+		"state": "Bosnia and Herzegovina",
+		"date": "22-05-92"
+	},
+	{
+		"state": "Botswana",
+		"date": "17-10-66"
+	},
+	{
+		"state": "Brazil",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Brunei Darussalam",
+		"date": "21-09-84"
+	},
+	{
+		"state": "Bulgaria",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Bulgaria",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Burkina Faso",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Burundi",
+		"date": "18-09-62"
+	},
+	{
+		"state": "Cabo Verde",
+		"date": "16-09-75"
+	},
+	{
+		"state": "Cameroon",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Canada",
+		"date": "09-11-45"
+	},
+	{
+		"state": "Canada",
+		"date": "09-11-45"
+	},
+	{
+		"state": "Central African Republic",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Chad",
+		"date": "0-09-60"
+	},
+	{
+		"state": "Chile",
+		"date": "24-10-45"
+	},
+	{
+		"state": "China",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Colombia",
+		"date": "05-11-45"
+	},
+	{
+		"state": "Comoros",
+		"date": "12-11-75"
+	},
+	{
+		"state": "Congo",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Costa Rica",
+		"date": "02-11-45"
+	},
+	{
+		"state": "Côte D'Ivoire",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Croatia",
+		"date": "22-05-92"
+	},
+	{
+		"state": "Cuba",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Cyprus",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Czech Republic",
+		"date": "19-01-93"
+	},
+	{
+		"state": "Democratic People's Republic of Korea",
+		"date": "17-09-91"
+	},
+	{
+		"state": "Democratic Republic of the Congo",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Denmark",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Djibouti",
+		"date": "20-09-77"
+	},
+	{
+		"state": "Dominica",
+		"date": "18-12-78"
+	},
+	{
+		"state": "Dominican Republic",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Ecuador",
+		"date": "21-12-45"
+	},
+	{
+		"state": "Egypt",
+		"date": "24-10-45"
+	},
+	{
+		"state": "El Salvador",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Equatorial Guinea",
+		"date": "12-11-68"
+	},
+	{
+		"state": "Eritrea",
+		"date": "28-05-93"
+	},
+	{
+		"state": "Estonia",
+		"date": "17-09-91"
+	},
+	{
+		"state": "Ethiopia",
+		"date": "13-11-45"
+	},
+	{
+		"state": "Fiji",
+		"date": "13-10-70"
+	},
+	{
+		"state": "Finland",
+		"date": "14-12-55"
+	},
+	{
+		"state": "France",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Gabon",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Gambia (Republic of The)",
+		"date": "21-09-65"
+	},
+	{
+		"state": "Georgia",
+		"date": "31-07-92"
+	},
+	{
+		"state": "Germany",
+		"date": "18-09-73"
+	},
+	{
+		"state": "Ghana",
+		"date": "08-03-57"
+	},
+	{
+		"state": "Greece",
+		"date": "25-10-45"
+	},
+	{
+		"state": "Grenada",
+		"date": "17-09-74"
+	},
+	{
+		"state": "Guatemala",
+		"date": "21-11-45"
+	},
+	{
+		"state": "Guinea",
+		"date": "12-12-58"
+	},
+	{
+		"state": "Guinea Bissau",
+		"date": "17-09-74"
+	},
+	{
+		"state": "Guyana",
+		"date": "20-09-66"
+	},
+	{
+		"state": "Haiti",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Honduras",
+		"date": "17-12-45"
+	},
+	{
+		"state": "Hungary",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Iceland",
+		"date": "19-11-46"
+	},
+	{
+		"state": "India",
+		"date": "30-10-45"
+	},
+	{
+		"state": "Indonesia",
+		"date": "28-09-50"
+	},
+	{
+		"state": "Iran (Islamic Republic of)",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Iraq",
+		"date": "21-12-45"
+	},
+	{
+		"state": "Ireland",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Israel",
+		"date": "11-05-49"
+	},
+	{
+		"state": "Italy",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Jamaica",
+		"date": "18-09-62"
+	},
+	{
+		"state": "Japan",
+		"date": "18-12-56"
+	},
+	{
+		"state": "Jordan",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Kazakhstan",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Kenya",
+		"date": "16-12-63"
+	},
+	{
+		"state": "Kiribati",
+		"date": "14-09-99"
+	},
+	{
+		"state": "Kuwait",
+		"date": "14-05-63"
+	},
+	{
+		"state": "Kyrgyzstan",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Lao People’s Democratic Republic",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Latvia",
+		"date": "17-09-91"
+	},
+	{
+		"state": "Lebanon",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Lesotho",
+		"date": "17-10-66"
+	},
+	{
+		"state": "Liberia",
+		"date": "02-11-45"
+	},
+	{
+		"state": "Libya",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Liechtenstein",
+		"date": "18-09-90"
+	},
+	{
+		"state": "Lithuania",
+		"date": "17-09-91"
+	},
+	{
+		"state": "Luxembourg",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Madagascar",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Malawi",
+		"date": "01-12-64"
+	},
+	{
+		"state": "Malaysia",
+		"date": "17-09-57"
+	},
+	{
+		"state": "Maldives",
+		"date": "21-09-65"
+	},
+	{
+		"state": "Mali",
+		"date": "28-09-60"
+	},
+	{
+		"state": "Malta",
+		"date": "01-12-64"
+	},
+	{
+		"state": "Marshall Islands",
+		"date": "17-09-91"
+	},
+	{
+		"state": "Mauritania",
+		"date": "27-10-61"
+	},
+	{
+		"state": "Mauritius",
+		"date": "24-04-68"
+	},
+	{
+		"state": "Mexico",
+		"date": "07-11-45"
+	},
+	{
+		"state": "Micronesia (Federated States of)",
+		"date": "17-09-91"
+	},
+	{
+		"state": "Monaco",
+		"date": "28-05-93"
+	},
+	{
+		"state": "Mongolia1",
+		"date": "27-10-6"
+	},
+	{
+		"state": "Montenegro",
+		"date": "28-06-06"
+	},
+	{
+		"state": "Morocco",
+		"date": "12-11-56"
+	},
+	{
+		"state": "Mozambique",
+		"date": "16-09-75"
+	},
+	{
+		"state": "Myanmar",
+		"date": "19-04-48"
+	},
+	{
+		"state": "Namibia",
+		"date": "23-04-90"
+	},
+	{
+		"state": "Nauru",
+		"date": "14-09-99"
+	},
+	{
+		"state": "Nepal",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Netherlands",
+		"date": "10-12-45"
+	},
+	{
+		"state": "New Zealand",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Nicaragua",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Niger",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Nigeria",
+		"date": "07-10-60"
+	},
+	{
+		"state": "Norway",
+		"date": "27-11-45"
+	},
+	{
+		"state": "Oman",
+		"date": "07-10-71"
+	},
+	{
+		"state": "Pakistan",
+		"date": "30-09-47"
+	},
+	{
+		"state": "Palau",
+		"date": "15-12-94"
+	},
+	{
+		"state": "Panama",
+		"date": "13-11-45"
+	},
+	{
+		"state": "Papua New Guinea",
+		"date": "10-10-75"
+	},
+	{
+		"state": "Paraguay",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Peru",
+		"date": "31-10-45"
+	},
+	{
+		"state": "Philippines",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Poland",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Portugal",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Qatar",
+		"date": "21-09-71"
+	},
+	{
+		"state": "Republic of Korea",
+		"date": "17-09-91"
+	},
+	{
+		"state": "Republic of Moldova",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Romania",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Russian Federation",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Rwanda",
+		"date": "18-09-62"
+	},
+	{
+		"state": "Saint Kitts and Nevis",
+		"date": "23-09-83"
+	},
+	{
+		"state": "Saint Lucia",
+		"date": "18-09-79"
+	},
+	{
+		"state": "Saint Vincent and the Grenadines",
+		"date": "16-09-80"
+	},
+	{
+		"state": "Samoa",
+		"date": "15-12-76"
+	},
+	{
+		"state": "San Marino",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Sao Tome and Principe",
+		"date": "16-09-75"
+	},
+	{
+		"state": "Saudi Arabia",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Senegal",
+		"date": "28-09-60"
+	},
+	{
+		"state": "Serbia",
+		"date": "01-11-00"
+	},
+	{
+		"state": "Seychelles",
+		"date": "21-09-76"
+	},
+	{
+		"state": "Sierra Leone",
+		"date": "27-09-61"
+	},
+	{
+		"state": "Singapore",
+		"date": "21-09-65"
+	},
+	{
+		"state": "Slovakia",
+		"date": "19-01-93"
+	},
+	{
+		"state": "Slovenia",
+		"date": "22-05-92"
+	},
+	{
+		"state": "Solomon Islands",
+		"date": "19-09-78"
+	},
+	{
+		"state": "Somalia",
+		"date": "20-09-60"
+	},
+	{
+		"state": "South Africa",
+		"date": "07-11-45"
+	},
+	{
+		"state": "South Sudan",
+		"date": "14-07-11"
+	},
+	{
+		"state": "Spain",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Sri Lanka",
+		"date": "14-12-55"
+	},
+	{
+		"state": "Sudan",
+		"date": "12-11-56"
+	},
+	{
+		"state": "Suriname",
+		"date": "04-12-75"
+	},
+	{
+		"state": "Swaziland",
+		"date": "24-09-68"
+	},
+	{
+		"state": "Sweden",
+		"date": "19-11-46"
+	},
+	{
+		"state": "Switzerland",
+		"date": "10-09-02"
+	},
+	{
+		"state": "Syrian Arab Republic",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Tajikistan",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Thailand",
+		"date": "16-12-46"
+	},
+	{
+		"state": "The former Yugoslav Republic of Macedonia",
+		"date": "08-04-93"
+	},
+	{
+		"state": "Timor-Leste",
+		"date": "27-09-02"
+	},
+	{
+		"state": "Togo",
+		"date": "20-09-60"
+	},
+	{
+		"state": "Tonga",
+		"date": "14-09-99"
+	},
+	{
+		"state": "Trinidad and Tobago",
+		"date": "18-09-62"
+	},
+	{
+		"state": "Tunisia",
+		"date": "12-11-56"
+	},
+	{
+		"state": "Turkey",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Turkmenistan",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Tuvalu",
+		"date": "05-09-00"
+	},
+	{
+		"state": "Uganda",
+		"date": "25-10-62"
+	},
+	{
+		"state": "Ukraine",
+		"date": "24-10-45"
+	},
+	{
+		"state": "United Arab Emirates",
+		"date": "09-12-71"
+	},
+	{
+		"state": "United Kingdom of Great Britain and Northern Ireland",
+		"date": "24-10-45"
+	},
+	{
+		"state": "United Republic of Tanzania",
+		"date": "14-12-61"
+	},
+	{
+		"state": "United States of America",
+		"date": "24-10-45"
+	},
+	{
+		"state": "Uruguay",
+		"date": "18-12-45"
+	},
+	{
+		"state": "Uzbekistan",
+		"date": "02-03-92"
+	},
+	{
+		"state": "Vanuatu",
+		"date": "15-09-81"
+	},
+	{
+		"state": "Venezuela, Bolivarian Republic of",
+		"date": "15-11-45"
+	},
+	{
+		"state": "Viet Nam",
+		"date": "20-09-77"
+	},
+	{
+		"state": "Yemen",
+		"date": "30-09-47"
+	},
+	{
+		"state": "Zambia",
+		"date": "01-12-64"
+	},
+	{
+		"state": "Zimbabwe",
+		"date": "25-08-80"
+	}
+]
