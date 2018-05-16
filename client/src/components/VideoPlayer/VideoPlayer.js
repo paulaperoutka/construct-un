@@ -6,7 +6,7 @@ class VideoPlayer extends Component {
 	render() {
 		return (
 			<div>
-				<ReactPlayer url="https://bcliveunivsecure-lh.akamaihd.net/i/un150_1@575439/index_1328_av-b.m3u8?sd=10&rebase=on" playing controls />
+				<ReactPlayer url="https://bcliveunivsecure-lh.akamaihd.net/i/un150_1@575439/master.m3u8" controls />
 			</div>
 		)
 	}
