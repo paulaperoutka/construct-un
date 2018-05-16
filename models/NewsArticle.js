@@ -33,7 +33,10 @@ const articleSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	comments: []	
+	comments: [{
+		user: String,
+		body: String
+	}]	
 });
 
 module.exports = mongoose.model("NewsArticle", articleSchema);
