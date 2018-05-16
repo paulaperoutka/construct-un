@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input, FormText, Row, Col, Container } 
 import Navbar from "../../components/Navbar";
 import Newsfeed from '../../components/Newsfeed';
 import World from '../../components/Map';
-import Resolution from '../../components/Resolution';
+import CreateResolution from '../../components/CreateResolution';
 import Chat from '../../components/Chat';
 import "./ResolutionsPage.css";
 
@@ -24,7 +24,7 @@ class ResolutionsPage extends Component {
 						</Col>
 						<Col md="8">
 							<World />
-							<Resolution />
+							<CreateResolution />
 							<Chat />
 						</Col>
 					</Row>

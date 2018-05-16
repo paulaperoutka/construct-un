@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Alert, Button, Card, Col, Container, Form, FormGroup, FormText, Input, Jumbotron, Label, Row, Text } from "reactstrap";
 
-class Resolution extends Component {
+class CreateResolution extends Component {
 
 	state = {
 		memberNation: "",
@@ -27,7 +27,7 @@ class Resolution extends Component {
       this.setState({
         isValid: true
       });
-      axios.post("/api/resolution", this.state)
+      axios.post("/api/resolutions", this.state)
         .then(res => this.props.history.push("/"))
         .catch(err => console.log(err));
     }
@@ -40,7 +40,7 @@ class Resolution extends Component {
 
 
 	componentDidMount() {
-		axios.get("/api/resolution")
+		axios.get("/api/resolutions")
 			.then(res => {
 				this.setState({
 					resolutions: res.data
@@ -62,21 +62,16 @@ class Resolution extends Component {
 			          <form>
 			            <Input name="memberNation" placeholder="Nation (required)" />
 			            <Input name="resolutionTitle" placeholder="Resolution Title (required)" />
-			            <Input type="select" name="sponsoringState" defaultValue="Sponsoring State (required)" >
+			            <Input type="select" name="sponsoringState">
+			            	<option>Sponsoring State (required)</option>
 			            	<option>United States of America</option>
 				            <option>Russia</option>
 				            <option>United Kingdom</option>
 				            <option>China</option>
 				            <option>France</option>
 			            </Input>
-			            <select name="objective" defaultValue="UN Objective (required)">
-				            <option>Maintain International Peace and Security</option>
-				            <option>Protect Human Rights</option>
-				            <option>Deliver Humanitarian Aid</option>
-				            <option>Promote Sustainable Development</option>
-				            <option>Uphold International Law</option>
-			            </select>
-			            <Input type="select" name="selectMulti" placeholder="UN Objective (required)">
+			            <Input type="select" name="objective">
+			            	<option>UN Objective (required)</option>
 				            <option>Maintain International Peace and Security</option>
 				            <option>Protect Human Rights</option>
 				            <option>Deliver Humanitarian Aid</option>
@@ -89,7 +84,7 @@ class Resolution extends Component {
 			          <br />
 				        { !this.state.isValid && (
 				            <Alert color="danger">
-				              Resolution must be completed before submission.
+				              Resolution must be complete before submission accepted.
 				            </Alert>
 				          )
 				        }
@@ -103,4 +98,4 @@ class Resolution extends Component {
 }
 
 
-export default Resolution;
+export default CreateResolution;
