@@ -5,6 +5,7 @@ import Newsfeed from '../../components/Newsfeed';
 import World from '../../components/Map';
 import Chambers from '../../components/Chambers';
 import Chat from '../../components/Chat';
+import VideoPlayer from "../../components/VideoPlayer";
 import "./ChambersPage.css";
 
 class ChambersPage extends Component {
@@ -17,6 +18,9 @@ class ChambersPage extends Component {
 			<div className="page-wrapper">
 				<Navbar />
 				<Container>
+					<Row>
+						<VideoPlayer />
+					</Row>
 					<Row>
 						<Col md="4">
 							<Newsfeed />
