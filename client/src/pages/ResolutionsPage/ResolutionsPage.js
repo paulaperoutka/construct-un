@@ -8,6 +8,7 @@ import Chat from '../../components/Chat';
 import "./ResolutionsPage.css";
 
 class ResolutionsPage extends Component {
+
 	state = {
 		country: []
 	}

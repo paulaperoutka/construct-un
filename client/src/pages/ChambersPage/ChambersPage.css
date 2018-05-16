@@ -5,7 +5,12 @@ body {
 }
 
 .page-wrapper {
-	margin-top: 300px;
+	margin-top: 200px;
+}
+
+.video {
+  width: 33vw;
+  height: 33vh;
 }
 
 
