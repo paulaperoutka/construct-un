@@ -26,14 +26,14 @@ passport.use('local-signup', localSignupStrategy);
 passport.use('local-login', localLoginStrategy);
 
 // pass the authenticaion checker middleware
-// const authCheckMiddleware = require('./middleware/auth-check');
-// app.use('/api', authCheckMiddleware);
+const authCheckMiddleware = require('./middleware/auth-check');
+app.use('/apiAuth', authCheckMiddleware);
 
 // authentication routes
 const authRoutes = require('./routes/auth');
 const apiRoutes = require('./routes/loginApi');
 app.use('/auth', authRoutes);
-app.use('/api', apiRoutes);
+app.use('/apiAuth', apiRoutes);
 
 app.use("/api/news", routes.newsAPI);
 // app.use("/api/resolution", routes.resolutionAPI);
