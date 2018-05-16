@@ -41,7 +41,7 @@ app.use("/api/news", routes.newsAPI);
 //countries api route
 app.use("/api/countries", routes.countriesAPI);
 
-app.use("/api/resolutions", routes.resolutionAPI);
+app.use("/api/resolutions", routes.resolutionsAPI);
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
