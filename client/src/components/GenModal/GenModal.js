@@ -17,10 +17,10 @@ class GenModal extends Component {
 	render() {
 		console.log(this.props);
 	  return (
-	    <div className="gen-modal">
-	      <Modal isOpen={this.props.modalOpen} toggle={this.props.modalToggle} className={this.props.className}>
-	        <ModalHeader toggle={this.props.modalToggle}><h3>{this.props.modalData.resolutionTitle}</h3></ModalHeader>
-	        <ModalBody>
+	    <div>
+	      <Modal className="gen-modal" isOpen={this.props.modalOpen} toggle={this.props.modalToggle} className={this.props.className}>
+	        <ModalHeader className="text-dark" toggle={this.props.modalToggle}><h3>{this.props.modalData.resolutionTitle}</h3></ModalHeader>
+	        <ModalBody className="text-dark">
 	        	<h4>Proposal by: {this.props.modalData.memberNation}</h4>
 	        	<h4>Sponsored by: {this.props.modalData.sponsoringNation}</h4>
 	        	<h4>Objective: {this.props.modalData.objective}</h4>
