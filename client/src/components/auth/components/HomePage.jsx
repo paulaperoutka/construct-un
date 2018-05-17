@@ -12,7 +12,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <img src="https://i.ytimg.com/vi/T8-YdgU-CF4/maxresdefault.jpg" style={{width: 800 }}/>
+        <img src="https://i.ytimg.com/vi/T8-YdgU-CF4/maxresdefault.jpg" style={{width: '100%' }}/>
       <Card className="container">
           {Auth.isUserAuthenticated() ? (
             <CardText style={{ fontSize: '16px', color: 'green' }}>Welcome! You are logged in.</CardText>
