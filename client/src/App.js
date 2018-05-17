@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 
-import Portal from "./pages/Portal";
+import Main from "./components/auth/Main";
 import ChambersPage from "./pages/ChambersPage";
 import ResolutionsPage from "./pages/ResolutionsPage";
 import ScenarioPage from "./pages/ScenarioPage";
@@ -15,10 +15,9 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Portal} />
-          <Route exact path="/securitycouncil" component={ChambersPage} />
-          <Route exact path="/unresolutions" component={ResolutionsPage} />
-          <Route exact path="/scenarios" component={ScenarioPage} />
+          <Route exact path="/" component={Main} />
+          <Route  path="/unresolutions" component={ResolutionsPage} />
+          <Route  path="/scenarios" component={ScenarioPage} />
         </div>
       </Router>
     );

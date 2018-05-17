@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'material-ui/Card';
 import { Label, Input, FormText } from 'reactstrap';
 import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
+import {Link } from 'react-router-dom';
 const Dashboard = ({ user }) => (
   <Card className="container">
     <FormText>
@@ -17,7 +18,9 @@ const Dashboard = ({ user }) => (
       <option>France</option>
     </Input>
     <br />
-    <RaisedButton fullWidth={true}>Enter the UN</RaisedButton>
+    <RaisedButton fullWidth={true}>
+    <Link to="/securitycouncil">Enter the UN</Link>
+    </RaisedButton>
   </Card>
 );
 
