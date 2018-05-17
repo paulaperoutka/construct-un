@@ -17,6 +17,8 @@ import {
 } from 'react-router-dom'
 
 
+import ScenarioPage from '../../pages/ScenarioPage'
+
 import HomePage from './components/HomePage.jsx';
 import LoginPage from './containers/LoginPage.jsx';
 import LogoutFunction from './containers/LogoutFunction.jsx';
@@ -98,6 +100,7 @@ class Main extends Component {
                   <Link to="/logout">
                     <RaisedButton fullWidth={true}>Log Out</RaisedButton>
                   </Link>
+
                 </div>
               ) : (
                 <div className="top-bar-right">
@@ -120,6 +123,9 @@ class Main extends Component {
             <LoggedOutRoute exact path="/signup" component={SignUpPage}/>
             <Route exact path="/logout" component={LogoutFunction}/>
             <Route  path="/securitycouncil" component={ChambersPage} />
+
+            <Route exact path="/instructions" component={ScenarioPage} />
+
             {/* <Route path="/" component={Portal} /> */}
           {/* <Route  path="/unresolutions" component={ResolutionsPage} />
           <Route  path="/scenarios" component={ScenarioPage} />

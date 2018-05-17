@@ -43,14 +43,15 @@ class CountryModal extends React.Component {
     return (
       <foreignObject>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-container">
-          <ModalHeader toggle={this.toggle}>{this.props.id}</ModalHeader>
+          
+            <ModalHeader toggle={this.toggle}><img  src={this.state.data.flag} style={{width:'50px'}} alt="no flag"/>
+            {" "}{this.props.id}
+          </ModalHeader>
           <ModalBody>
-            <img  src={this.state.data.flag} style={{width:'50px'}} alt="no flag"/>
           {this.state.data ? (
             <ul>
               <li>Capital City: {this.state.data.capital}</li>
               <li>Official Language: {this.state.data.officialLanguage}</li>
-              <li>{this.state.data.flag}</li>
               <li>Area: {this.state.data.area} km<sup>2</sup></li>
               <li>Population: {this.state.data.population}</li>
               <li>Currency{this.state.data.currency}</li>
