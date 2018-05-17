@@ -7,8 +7,9 @@ html {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100%;
-  /*background-height: 100%;*/
-  margin-left: 28px;
+  /* background-height: 100%; */
+	margin-left: 28px;
+	text-align: center;
 
 }
 

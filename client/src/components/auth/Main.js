@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from '@material-ui/core/Button'
+import Grid from '@material-ui/core/Grid'
+import FormGroup from '@material-ui/core/FormGroup'
 // import Portal from "../../pages/Portal";
 import ChambersPage from "../../pages/ChambersPage";
 // import ResolutionsPage from "../../pages/ResolutionsPage";
 // import ScenarioPage from "../../pages/ScenarioPage";
-// import './Main.css';
-import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
+import './Main.css';
+// import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import {
   BrowserRouter as Router,
   Route,
@@ -79,34 +81,40 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <Router>
+      <div className="portal-wrapper">
       {/* <Row>
 					<Col md="2" />
 					<Col md="8">
 						<h1 className="portal-header">Construct UN</h1>
 						<Form className="portal-content">
 							<FormGroup> */}
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <Router>
+      
+          <Grid container spacing={0}>
+          <Grid item md={2}/>
+          <Grid  item md={8}>
+          <h1 className="portal-header">Construct UN</h1>
+          <FormGroup className="portal-content form-group">
           <div>
             <div className="top-bar">
               {this.state.authenticated ? (
                 <div className="top-bar-right">
                   <Link to="/dashboard">
-                    <RaisedButton fullWidth={true}>Country Select</RaisedButton>
+                    <Button variant="raised" fullWidth={true}>Country Select</Button>
                   </Link>
                   <Link to="/logout">
-                    <RaisedButton fullWidth={true}>Log Out</RaisedButton>
+                    <Button variant="raised" fullWidth={true}>Log Out</Button>
                   </Link>
                 </div>
               ) : (
                 <div className="top-bar-right">
                   
                     <Link to="/login">
-                      <RaisedButton fullWidth={true}>Log in</RaisedButton>
+                      <Button>Log in</Button>
                     </Link>
                     <Link to="/signup">
-                      <RaisedButton fullWidth={true}>Sign up</RaisedButton>
+                      <Button>Sign up</Button>
                     </Link>
                   
                 </div>
@@ -126,14 +134,19 @@ class Main extends Component {
           <Route  path="/securitycouncil" component={ChambersPage} /> */}
             
           </div>
-        </Router>
-      </MuiThemeProvider>
+          </FormGroup >
+          </Grid>
+          <Grid item md={2}/>
+          </Grid>
+      
       {/* </FormGroup>
       </Form>
     </Col>
     <Col md="2" />
   </Row> */}
 </div>
+</Router>
+</MuiThemeProvider>
     );
   }
 }
