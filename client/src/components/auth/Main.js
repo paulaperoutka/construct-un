@@ -15,14 +15,13 @@ import {
   Link,
   Redirect  
 } from 'react-router-dom'
-
-
 import HomePage from './components/HomePage.jsx';
 import LoginPage from './containers/LoginPage.jsx';
 import LogoutFunction from './containers/LogoutFunction.jsx';
 import SignUpPage from './containers/SignUpPage.jsx';
 import DashboardPage from './containers/DashboardPage.jsx';
 import Auth from './modules/Auth';
+import axios from 'axios';
 
 // remove tap delay, essential for MaterialUI to work properly
 injectTapEventPlugin();
@@ -70,6 +69,15 @@ class Main extends Component {
   componentDidMount() {
     // check if user is logged in on refresh
     this.toggleAuthenticateStatus()
+    axios.get("/api/countries")
+      .then(res => {
+        if(res.data.length) {
+        
+          this.data = res.data
+    console.log(this.data)
+    // console.log(this.state.data)
+    // console.log(this.state.data.Country 
+  }})
   }
 
   toggleAuthenticateStatus() {
@@ -80,12 +88,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-      <Row>
-					<Col md="2" />
-					<Col md="8">
-						<h1 className="portal-header">Construct UN</h1>
-						<Form className="portal-content">
-							<FormGroup>
+      
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <Router>
           <div>
@@ -119,7 +122,11 @@ class Main extends Component {
             <LoggedOutRoute exact path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
             <LoggedOutRoute exact path="/signup" component={SignUpPage}/>
             <Route exact path="/logout" component={LogoutFunction}/>
-            <Route  path="/securitycouncil" component={ChambersPage} />
+            {/* <Route  path="/securitycouncil" component={ChambersPage} /> */}
+            <Route
+              path='/securitycouncil'
+              render={(props) => <ChambersPage {...props} data={this.data} />}
+            />
             {/* <Route path="/" component={Portal} /> */}
           {/* <Route  path="/unresolutions" component={ResolutionsPage} />
           <Route  path="/scenarios" component={ScenarioPage} />
@@ -128,11 +135,7 @@ class Main extends Component {
           </div>
         </Router>
       </MuiThemeProvider>
-      </FormGroup>
-      </Form>
-    </Col>
-    <Col md="2" />
-  </Row>
+      
 </div>
     );
   }

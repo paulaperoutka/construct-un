@@ -24,7 +24,7 @@ class ChambersPage extends Component {
 							<VideoPlayer />
 						</Col>
 						<Col md="8">
-							<World />
+							<World data={this.props.data}/>
 							<Chambers />
 						</Col>
 					</Row>

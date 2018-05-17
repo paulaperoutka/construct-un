@@ -3,16 +3,24 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import axios from "axios";
 import './CountryModal.css'
 
+
+
+
 class CountryModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       modal: false,
-      data: []
+      
     
     };
      
     this.toggle = this.toggle.bind(this);
+  }
+
+  countryData = (id) => {
+    return this.props.data
+
   }
 
   bound = (xy) => {
@@ -21,40 +29,38 @@ class CountryModal extends React.Component {
 
   componentDidMount() {
     this.box = [this.bound(this.props.id).x, this.bound(this.props.id).y, this.bound(this.props.id).width, this.bound(this.props.id).height]
+   
+  
+    this.countryD = this.countryData(this.props.id)
+  
+  console.log(this.props.data[0])
     
-    axios.get("/api/countries/" + this.props.id)
-      .then(res => {
-        if(res.data.length) {
-        this.setState({
-          data: res.data[0]
-      })
-    console.log(this.state.data)
-    // console.log(this.state.data.country)
-  }})
   } 
   
+  
+
   toggle() {
     this.setState({
-      modal: !this.state.modal
+      modal: !this.props.modal
     });
   }
   
   render() {
     return (
       <foreignObject>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-container">
+        <Modal isOpen={this.props.modal} toggle={this.toggle} className="modal-container">
           <ModalHeader toggle={this.toggle}>{this.props.id}</ModalHeader>
           <ModalBody>
-            <img  src={this.state.data.flag} style={{width:'50px'}} alt="no flag"/>
-          {this.state.data ? (
+            {/* <img  src={this.props.data.flag} style={{width:'50px'}} alt="no flag"/>
+          {this.props.data ? (
             <ul>
-              <li>Capital City: {this.state.data.capital}</li>
-              <li>Official Language: {this.state.data.officialLanguage}</li>
-              <li>{this.state.data.flag}</li>
-              <li>Area: {this.state.data.area} km<sup>2</sup></li>
-              <li>Population: {this.state.data.population}</li>
-              <li>Currency{this.state.data.currency}</li>
-            </ul>
+              <li>Capital City: {this.props.data.capital}</li>
+              <li>Official Language: {this.props.data.officialLanguage}</li>
+              <li>{this.props.data.flag}</li>
+              <li>Area: {this.props.data.area} km<sup>2</sup></li>
+              <li>Population: {this.props.data.population}</li>
+              <li>Currency{this.props.data.currency}</li>
+            </ul> */}
           ) : (
             <h3>No Results to Display</h3>
           )}
