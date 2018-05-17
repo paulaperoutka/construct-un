@@ -5,20 +5,29 @@ import {
   CarouselItem,
   CarouselControl,
   Col,
-  Row
+  Row,
+  Button
 } from "reactstrap";
 import "./ResolutionCarousel.css";
+import GenModal from "../GenModal";
 
 class ResolutionCarousel extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { activeIndex: 0 };
+    this.state = { 
+      activeIndex: 0,
+      modal: false,
+      modalData: {}
+    };
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+    this.modalToggle = this.modalToggle.bind(this);
+    this.modalComment = this.modalComment.bind(this);
+    this.modalOpen = this.modalOpen.bind(this);
   }
 
   onExiting() {
@@ -46,6 +55,22 @@ class ResolutionCarousel extends Component {
     this.setState({ activeIndex: newIndex });
   }
 
+  modalToggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  modalOpen(e) {
+    const resIndex = e.target.getAttribute("data-index");
+    this.setState({modalData: this.props.resolutions[resIndex]});
+    this.modalToggle();
+  }
+
+  modalComment() {
+    console.log("WIP");
+  }
+
   render() {
     const { activeIndex } = this.state;
 
@@ -54,14 +79,15 @@ class ResolutionCarousel extends Component {
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
+          key={item._id}
         >
           <div id="resolution-render-container">
             <h4>{item.resolutionTitle}</h4>
-            <h5>Proposed by: {item.memberNation}</h5>
-            {/*<h5>{item.sponsoringNation}</h5>
-            <h6>{item.objective}</h6>
-            <p>{item.proposal}</p>*/}
+            <h5>Promoted by: {item.memberNation}</h5>
+            <Button color="secondary" onClick={this.modalOpen} data-index={this.props.resolutions.indexOf(item)}>View</Button>
+            {/*<h5>{item.sponsoringNation}</h5>*/}
+            {/*<h6>{item.objective}</h6>*/}
+            {/*<p>{item.proposal}</p>*/}
           </div>
         </CarouselItem>
 
@@ -69,17 +95,20 @@ class ResolutionCarousel extends Component {
     });
 
     return (
-      <Card className="resolutionCard">
-        <Carousel
-          activeIndex={activeIndex}
-          next={this.next}
-          previous={this.previous}
-        >
-          {slides}
-          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-        </Carousel>
-      </Card>
+      <div>
+        <GenModal modalOpen={this.state.modal} modalToggle={this.modalToggle} modalData={this.state.modalData} submitBtn={"Comment"} modalSubmit={this.modalComment} />
+        <Card className="resolutionCard">
+          <Carousel
+            activeIndex={activeIndex}
+            next={this.next}
+            previous={this.previous}
+          >
+            {slides}
+            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+          </Carousel>
+        </Card>
+      </div>
     );
   }
 }

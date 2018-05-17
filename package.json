@@ -9,12 +9,12 @@
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "start": "concurrently \"node server.js\" \"npm run client\"",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.0.17",
