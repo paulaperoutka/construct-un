@@ -68,7 +68,7 @@ class CreateResolution extends Component {
 		      <Row>
 		        <Col size="md-8" id="no-margin">
 		        	<Card>
-			          <Jumbotron>
+			          <Jumbotron id="jumbo-propose">
 			            <h1>Propose A Resolution</h1>
 			          </Jumbotron>
 			          <form>
@@ -91,7 +91,7 @@ class CreateResolution extends Component {
 				            <option>Uphold International Law</option>
 				          </Input>
 			          	<Input type="textarea" name="proposal" value={this.state.proposal} onChange={this.onChange} placeholder="Proposal (Optional)" />
-			            <Button onClick={this.onSubmit} color="info">Submit Resolution</Button>
+			            <Button onClick={this.onSubmit} color="secondary" id="submit-button">Submit Resolution</Button>
 			          </form>
 			          <br />
 				        { !this.state.isValid && (
