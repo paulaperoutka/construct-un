@@ -26,20 +26,24 @@ const Instructions = props => (
 			<p>For Model UN participants in particular, practice writing proposals and garnering support from peers. </p>
 			<Link to="/unresolutions"><Button outline color="secondary">Propose a Resolution</Button></Link>
 
+			
+			<br />
+			<br />
+			<h3>UN Members</h3>
+			<p>Hover over a world map to see all UN member nations.  Click to see information about individual member nations.</p>
+
 			<br />
 			<br />
 			<h3>UN News Articles</h3>
 			<p>Read about the latest news coming directly from the UN.  Articles are organized by regions of the world.  Gather inspiration for writing proposals under any of the UN umbrella objectives.</p>
 
-
-			<br />
-			<h3>UN Chatter</h3>
-			<p>Chat with other users about recent news, resolutions proposals on the table.</p>
-
 			<br />
 			<h3>Live Feed</h3>
 			<p>Turn up the volume, expand the video, and watch live feeds directly from the UN Headquarters in New York.  After hours feeds also contain educational documentaries produced by the UN about global news, outreach, etc.</p>
 
+			<br />
+			<h3>UN Chatter</h3>
+			<p>Chat with other users about recent news, resolutions proposals on the table.</p>
 	  </Col>
 	  <Col md="2" />
   </Row>
