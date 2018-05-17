@@ -80,12 +80,12 @@ class Main extends Component {
   render() {
     return (
       <div>
-      <Row>
+      {/* <Row>
 					<Col md="2" />
 					<Col md="8">
 						<h1 className="portal-header">Construct UN</h1>
 						<Form className="portal-content">
-							<FormGroup>
+							<FormGroup> */}
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <Router>
           <div>
@@ -114,7 +114,7 @@ class Main extends Component {
 
             </div>
 
-            <PropsRoute path="/" component={HomePage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
+            <PropsRoute exact path="/" component={HomePage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
             <PrivateRoute exact path="/dashboard" component={DashboardPage}/>
             <LoggedOutRoute exact path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
             <LoggedOutRoute exact path="/signup" component={SignUpPage}/>
@@ -128,11 +128,11 @@ class Main extends Component {
           </div>
         </Router>
       </MuiThemeProvider>
-      </FormGroup>
+      {/* </FormGroup>
       </Form>
     </Col>
     <Col md="2" />
-  </Row>
+  </Row> */}
 </div>
     );
   }
