@@ -79,7 +79,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div className="portal-wrapper">
       {/* <Row>
 					<Col md="2" />
 					<Col md="8">

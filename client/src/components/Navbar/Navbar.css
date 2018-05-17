@@ -27,12 +27,18 @@ span {
 	/*margin-top: 10px;*/
 }
 
-.carousel-inner {
+.resolutionCard .carousel-inner {
   height: 17vh;
   width: auto;
   margin-top: 10px;
   padding: 10px 50px;
   position: relative;
   overflow: hidden;
+}
+
+#reroute2 {
+	font-family: 'Orbitron', sans-serif;
+	width: 33%;
+	margin-left: 5%;
 }
 

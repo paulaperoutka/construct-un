@@ -19,23 +19,6 @@ span {
 	height: 18vh;
 }
 
-.resolutionCard {
-	font-family: 'Orbitron', sans-serif;
-	background-color: darkgrey;
-	float: right;
-	height: 90%;
-	/*margin-top: 10px;*/
-}
-
-.carousel-inner {
-  height: 17vh;
-  width: auto;
-  margin-top: 10px;
-  padding: 10px 50px;
-  position: relative;
-  overflow: hidden;
-}
-
 #reroute {
 	float: right;
 	font-family: 'Orbitron', sans-serif;
