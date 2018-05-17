@@ -58,10 +58,10 @@ class ResolutionCarousel extends Component {
         >
           <div id="resolution-render-container">
             <h4>{item.resolutionTitle}</h4>
-            <h5>Sponsored by: {item.memberNation}</h5>
-            // <h5>{item.sponsoringNation}</h5>
-            // <h6>{item.objective}</h6>
-            // <p>{item.proposal}</p>
+            <h5>Proposed by: {item.memberNation}</h5>
+            {/*<h5>{item.sponsoringNation}</h5>
+            <h6>{item.objective}</h6>
+            <p>{item.proposal}</p>*/}
           </div>
         </CarouselItem>
 

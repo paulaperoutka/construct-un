@@ -16,8 +16,9 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={Main} />
-          <Route  path="/unresolutions" component={ResolutionsPage} />
-          <Route  path="/scenarios" component={ScenarioPage} />
+          <Route path="/unresolutions" component={ResolutionsPage} />
+          <Route path="/instructions" component={ScenarioPage} />
+          <Route path="/securitycouncil" component={ChambersPage} />
         </div>
       </Router>
     );
