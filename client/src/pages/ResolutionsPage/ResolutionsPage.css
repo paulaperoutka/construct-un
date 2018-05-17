@@ -5,7 +5,9 @@ body {
 }
 
 .page-wrapper {
-	margin-top: 300px;
+	margin-top: 75px;
 }
 
-
+#main-content {
+	margin-bottom: 10px;
+}

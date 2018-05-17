@@ -7,7 +7,7 @@ class ScenarioPage extends Component {
 	render() {
 		return (
 			<div className="wrapper">
-
+				
 			</div>
 		)
 	}

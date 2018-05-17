@@ -18,15 +18,19 @@ class ChambersPage extends Component {
 			<div className="page-wrapper">
 				<Navbar />
 				<Container>
-					<Row>
+					<Row id="main-content">
 						<Col md="4">
 							<Newsfeed />
 							<VideoPlayer />
-							<Chat />
 						</Col>
 						<Col md="8">
 							<World />
 							<Chambers />
+						</Col>
+					</Row>
+					<Row id="chat-footer">
+						<Col md="12">
+							<Chat />
 						</Col>
 					</Row>
 				</Container>

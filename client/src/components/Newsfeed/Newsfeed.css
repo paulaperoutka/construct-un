@@ -1,11 +1,17 @@
 .newsfeed {
-	color: black;
+	color: white;
 	font-family: "Times New Roman", Times, serif;
 	margin-bottom: 20px;
 	padding: 20px;
-	background-color: #8383A9FF;
+/*	background-color: #8383A9FF;*/
+	background-color: darkgrey;
 }
 
 .author {
 	font-style: italic;
+}
+
+h3 {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 18px;
 }
