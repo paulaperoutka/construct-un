@@ -9,7 +9,7 @@ import FormGroup from '@material-ui/core/FormGroup'
 import ChambersPage from "../../pages/ChambersPage";
 // import ResolutionsPage from "../../pages/ResolutionsPage";
 // import ScenarioPage from "../../pages/ScenarioPage";
-import './Main.css';
+import Splash from './Splash'
 // import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import {
   BrowserRouter as Router,
@@ -65,7 +65,8 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      authenticated: false
+      authenticated: false,
+      isStyled: true
     }
   };
 
@@ -81,29 +82,19 @@ class Main extends Component {
 
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme()}>
-      <Router>
-      <div className="portal-wrapper">
-      {/* <Row>
-					<Col md="2" />
-					<Col md="8">
-						<h1 className="portal-header">Construct UN</h1>
-						<Form className="portal-content">
-							<FormGroup> */}
       
-          <Grid container spacing={0}>
-          <Grid item md={2}/>
-          <Grid  item md={8}>
-          <h1 className="portal-header">Construct UN</h1>
-          <FormGroup className="portal-content form-group">
+      <Router>
+        <MuiThemeProvider muiTheme={getMuiTheme()}>
+      <Splash onChange={() => this.setState({ isStyled: false })}>
+      
           <div>
             <div className="top-bar">
               {this.state.authenticated ? (
                 <div className="top-bar-right">
-                  <Link to="/dashboard">
+                  <Link exact="true" to="/dashboard">
                     <Button variant="raised" fullWidth={true}>Country Select</Button>
                   </Link>
-                  <Link to="/logout">
+                  <Link exact="true" to="/logout">
                     <Button variant="raised" fullWidth={true}>Log Out</Button>
                   </Link>
                 </div>
@@ -122,31 +113,24 @@ class Main extends Component {
 
             </div>
 
-            <PropsRoute exact path="/" component={HomePage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
-            <PrivateRoute exact path="/dashboard" component={DashboardPage}/>
-            <LoggedOutRoute exact path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
-            <LoggedOutRoute exact path="/signup" component={SignUpPage}/>
-            <Route exact path="/logout" component={LogoutFunction}/>
-            <Route  path="/securitycouncil" component={ChambersPage} />
+            
             {/* <Route path="/" component={Portal} /> */}
           {/* <Route  path="/unresolutions" component={ResolutionsPage} />
           <Route  path="/scenarios" component={ScenarioPage} />
           <Route  path="/securitycouncil" component={ChambersPage} /> */}
             
           </div>
-          </FormGroup >
-          </Grid>
-          <Grid item md={2}/>
-          </Grid>
-      
-      {/* </FormGroup>
-      </Form>
-    </Col>
-    <Col md="2" />
-  </Row> */}
-</div>
+          </Splash>
+          <PropsRoute exact path="/" component={HomePage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
+            <PrivateRoute exact path="/dashboard" component={DashboardPage}/>
+            <LoggedOutRoute exact path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
+            <LoggedOutRoute exact path="/signup" component={SignUpPage}/>
+            <Route exact path="/logout" component={LogoutFunction}/>
+            <Route exact path="/securitycouncil" component={ChambersPage} />
+            </MuiThemeProvider>
 </Router>
-</MuiThemeProvider>
+
+
     );
   }
 }
