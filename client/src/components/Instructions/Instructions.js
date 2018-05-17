@@ -18,7 +18,7 @@ const Instructions = props => (
 			<br />
 			<h3>Security Council </h3>
 			<p>Take your seat at table on the Security Council. </p>
-			<Link to="/unresolutions"><Button outline color="secondary">Go to Security Council Chamber</Button></Link>
+			<Link to="/securitycouncil"><Button outline color="secondary">Go to Security Council Chamber</Button></Link>
 
 			<br />
 			<br />
