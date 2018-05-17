@@ -14,7 +14,6 @@ class Portal extends Component {
 	render() {
 		return(
 			<div className="portal-wrapper">
-				
 				<Row>
 					<Col md="2" />
 					<Col md="8">

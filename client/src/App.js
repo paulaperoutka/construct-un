@@ -17,10 +17,11 @@ class App extends Component {
         <div>
           
           <Route exact path="/" component={Main} />
-          <Route  path="/unresolutions" component={ResolutionsPage} />
-          <Route  path="/scenarios" component={ScenarioPage} />
-          <Route exact path="/securitycouncil" component={ChambersPage} />
-          
+
+          <Route path="/unresolutions" component={ResolutionsPage} />
+          <Route path="/instructions" component={ScenarioPage} />
+          <Route path="/securitycouncil" component={ChambersPage} />
+      
         </div>
       </Router>
     );
