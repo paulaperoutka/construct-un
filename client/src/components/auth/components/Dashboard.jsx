@@ -10,7 +10,7 @@ const Dashboard = ({ user }) => (
 		</FormText>
     <br />
     <Label for="country-select">UN Member Nations</Label>
-    <Input type="select" name="select" id="country-select">
+    <Input type="select" name="select" id="country-select" onChange={(e) => this.onChange(`${e.target.value}`)}>
       <option>United States of America</option>
       <option>Russian Federation</option>
       <option>United Kingdom of Great Britain and Northern Ireland</option>
