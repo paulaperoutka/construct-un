@@ -21,12 +21,12 @@ componentDidMount() {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Main} />
-          <Route path="/unresolutions" component={ResolutionsPage} />
+        <Route exact path="/" component={Main} >
+          <Route exact path="/unresolutions" component={ResolutionsPage} />
           <Route path="/instructions" component={ScenarioPage} />
           <Route exact path="/instructions" component={Instructions} />
           <Route path="/securitycouncil" component={ChambersPage} />
-      
+        </Route>
         </div>
       </Router>
     );

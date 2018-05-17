@@ -8,6 +8,7 @@ import ChambersPage from "../../pages/ChambersPage";
 // import ResolutionsPage from "../../pages/ResolutionsPage";
 // import ScenarioPage from "../../pages/ScenarioPage";
 // import './Main.css';
+import ResolutionsPage from '../../pages/ResolutionsPage'
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import {
   BrowserRouter as Router,
@@ -123,7 +124,7 @@ class Main extends Component {
             <LoggedOutRoute exact path="/signup" component={SignUpPage}/>
             <Route exact path="/logout" component={LogoutFunction}/>
             <Route  path="/securitycouncil" component={ChambersPage} />
-
+            <Route exact path="/unresolutions" component={ResolutionsPage} />
             <Route exact path="/instructions" component={ScenarioPage} />
 
             {/* <Route path="/" component={Portal} /> */}
