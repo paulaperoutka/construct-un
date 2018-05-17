@@ -19,7 +19,10 @@ const Dashboard = ({ user }) => (
     </Input>
     <br />
     <RaisedButton fullWidth={true}>
-    <Link to="/securitycouncil">Enter the UN</Link>
+    <Link to="/instructions">
+                    <RaisedButton fullWidth={true}>Enter</RaisedButton>
+                  </Link>
+    
     </RaisedButton>
   </Card>
 );
