@@ -3,7 +3,11 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton'
-
+// import Portal from "../../pages/Portal";
+import ChambersPage from "../../pages/ChambersPage";
+// import ResolutionsPage from "../../pages/ResolutionsPage";
+// import ScenarioPage from "../../pages/ScenarioPage";
+import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import {
   BrowserRouter as Router,
   Route,
@@ -102,13 +106,18 @@ class Main extends Component {
 
             </div>
 
-            <PropsRoute exact path="/" component={HomePage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
-            <PrivateRoute path="/dashboard" component={DashboardPage}/>
-            <LoggedOutRoute path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
-            <LoggedOutRoute path="/signup" component={SignUpPage}/>
-            <Route path="/logout" component={LogoutFunction}/>
+            <PropsRoute path="/" component={HomePage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
+            <PrivateRoute exact path="/dashboard" component={DashboardPage}/>
+            <LoggedOutRoute exact path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
+            <LoggedOutRoute exact path="/signup" component={SignUpPage}/>
+            <Route exact path="/logout" component={LogoutFunction}/>
+            <Route  path="/securitycouncil" component={ChambersPage} />
+            {/* <Route path="/" component={Portal} /> */}
+          {/* <Route  path="/unresolutions" component={ResolutionsPage} />
+          <Route  path="/scenarios" component={ScenarioPage} />
+          <Route  path="/securitycouncil" component={ChambersPage} /> */}
+            
           </div>
-
         </Router>
       </MuiThemeProvider>
     );
