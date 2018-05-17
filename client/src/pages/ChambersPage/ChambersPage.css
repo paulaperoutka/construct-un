@@ -5,7 +5,7 @@ body {
 }
 
 .page-wrapper {
-	margin-top: 200px;
+	margin-top: 75px;
 }
 
 .video {
@@ -13,4 +13,7 @@ body {
   height: 33vh;
 }
 
+#main-content {
+	margin-bottom: 10px;
+}
 

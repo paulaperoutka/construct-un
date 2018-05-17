@@ -4,6 +4,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { Alert, Button, Card, Col, Container, Form, FormGroup, FormText, Input, Jumbotron, Label, Row, Text } from "reactstrap";
 
+import "./CreateResolution.css";
+
 const initialState = {
     memberNation: "",
 		resolutionTitle: "",
@@ -61,10 +63,10 @@ class CreateResolution extends Component {
 
 	render () {
 		return (
-			<div className="">
+			<div className="create-container">
 				<Container fluid>
 		      <Row>
-		        <Col size="md-6">
+		        <Col size="md-8" id="no-margin">
 		        	<Card>
 			          <Jumbotron>
 			            <h1>Propose A Resolution</h1>

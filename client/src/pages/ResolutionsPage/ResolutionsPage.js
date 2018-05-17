@@ -5,6 +5,7 @@ import Newsfeed from '../../components/Newsfeed';
 import World from '../../components/Map';
 import CreateResolution from '../../components/CreateResolution';
 import Chat from '../../components/Chat';
+import VideoPlayer from "../../components/VideoPlayer";
 import "./ResolutionsPage.css";
 
 class ResolutionsPage extends Component {
@@ -18,18 +19,24 @@ class ResolutionsPage extends Component {
 			<div className="page-wrapper">
 				<Navbar />
 				<Container>
-					<Row>
+					<Row id="main-content">
 						<Col md="4">
 							<Newsfeed />
+							<VideoPlayer />
 						</Col>
 						<Col md="8">
 							<World />
 							<CreateResolution />
+						</Col>
+					</Row>
+					<Row id="chat-footer">
+						<Col md="12">
 							<Chat />
 						</Col>
 					</Row>
 				</Container>
 		   </div>
+
 		);
 	}
 }
