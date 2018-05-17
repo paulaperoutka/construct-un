@@ -77,10 +77,10 @@ class CreateResolution extends Component {
 			            <Input type="select" name="sponsoringNation" value={this.state.sponsoringNation} onChange={this.onChange}>
 										<option>Sponsoring Nation (required)</option>
 			            	<option>United States of America</option>
-				            <option>Russia</option>
-				            <option>United Kingdom</option>
-				            <option>China</option>
-				            <option>France</option>
+				            <option>Russian Federation</option>
+				            <option>United Kingdom of Great Britain and Northern Ireland</option>
+				            <option>People's Republic of China</option>
+				            <option>French Republic</option>
 			            </Input>
 			            <Input type="select" name="objective" value={this.state.objective} onChange={this.onChange}>
 			            	<option>UN Objective (required)</option>
