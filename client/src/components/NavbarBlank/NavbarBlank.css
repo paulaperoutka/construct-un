@@ -1,0 +1,46 @@
+.navbar {
+	width: 100%;
+	background-color: black;
+	position: fixed;
+	height: 22%;
+}
+
+span {
+	/*display: block;*/
+	width: fill;
+}
+
+.navbar-wrapper {
+	margin: 0;
+}
+
+#un-two {
+	margin-top: 10px;
+	height: 18vh;
+}
+
+.resolutionCard {
+	font-family: 'Orbitron', sans-serif;
+	background-color: darkgrey;
+	float: right;
+	height: 90%;
+	/*margin-top: 10px;*/
+}
+
+.carousel-inner {
+  height: 17vh;
+  width: auto;
+  margin-top: 10px;
+  padding: 10px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+#reroute {
+	float: right;
+	font-family: 'Orbitron', sans-serif;
+	color: red;
+	padding-top: 40px;
+}
+
+
