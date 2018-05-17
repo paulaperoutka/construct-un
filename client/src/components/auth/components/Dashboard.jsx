@@ -18,12 +18,12 @@ const Dashboard = ({ user }) => (
       <option>French Republic</option>
     </Input>
     <br />
-    <RaisedButton fullWidth={true}>
+    
     <Link to="/instructions">
                     <RaisedButton fullWidth={true}>Enter</RaisedButton>
                   </Link>
     
-    </RaisedButton>
+    
   </Card>
 );
 
