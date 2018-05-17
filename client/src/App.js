@@ -6,20 +6,25 @@ import Main from "./components/auth/Main";
 import ChambersPage from "./pages/ChambersPage";
 import ResolutionsPage from "./pages/ResolutionsPage";
 import ScenarioPage from "./pages/ScenarioPage";
-
+import Instructions from './components/Instructions'
 import './App.css';
 
 class App extends Component {
+
+componentDidMount() {
+  
+  
+
+}
 
   render() {
     return (
       <Router>
         <div>
-          
           <Route exact path="/" component={Main} />
-
           <Route path="/unresolutions" component={ResolutionsPage} />
           <Route path="/instructions" component={ScenarioPage} />
+          <Route exact path="/instructions" component={Instructions} />
           <Route path="/securitycouncil" component={ChambersPage} />
       
         </div>
