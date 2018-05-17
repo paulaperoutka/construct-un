@@ -5,9 +5,14 @@ body {
 }
 
 .page-wrapper {
-	margin-top: 75px;
+	margin-top: 15%;
 }
 
 #main-content {
 	margin-bottom: 10px;
 }
+
+/*.carousel-inner {
+	height: auto;
+	padding: 10px 50px;
+}*/
