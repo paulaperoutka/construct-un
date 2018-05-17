@@ -1,0 +1,14 @@
+body {
+	background-color: black;
+	background-image: none;
+	background-image: none;
+	color: white;
+}
+
+.page-wrapper {
+	margin-top: 15%;
+}
+
+#main-content {
+	margin-bottom: 10px;
+}
