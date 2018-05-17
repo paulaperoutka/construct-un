@@ -11,7 +11,6 @@ router.route("/")
 router.route("/:id")
 	.get(resolutions.findById)
 	// 	.put(resolutions.update);
-	// .put(comments.comment);
 	.delete(resolutions.delete);
 
 module.exports = router;
