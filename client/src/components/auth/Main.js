@@ -7,6 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import ChambersPage from "../../pages/ChambersPage";
 // import ResolutionsPage from "../../pages/ResolutionsPage";
 // import ScenarioPage from "../../pages/ScenarioPage";
+import './Main.css';
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import {
   BrowserRouter as Router,
@@ -78,6 +79,13 @@ class Main extends Component {
 
   render() {
     return (
+      <div>
+      <Row>
+					<Col md="2" />
+					<Col md="8">
+						<h1 className="portal-header">Construct UN</h1>
+						<Form className="portal-content">
+							<FormGroup>
       <MuiThemeProvider muiTheme={getMuiTheme()}>
         <Router>
           <div>
@@ -120,6 +128,12 @@ class Main extends Component {
           </div>
         </Router>
       </MuiThemeProvider>
+      </FormGroup>
+      </Form>
+    </Col>
+    <Col md="2" />
+  </Row>
+</div>
     );
   }
 }
