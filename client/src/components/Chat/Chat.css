@@ -8,19 +8,19 @@ body {
 }
 
 .wrapper {
-  height: 33vh;
-  width: 33vw;
+  height: 25vh;
+  width: 25vw;
 }
 
 .chat-container {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas: "sidebar main";
-  width: 25vw;
-  height: 25vh;
+  width: 80vw;
   border-style: solid;
   border-radius: 5px;
   border-color: white;
+  bottom: 0;
 }
 
 h1 {
@@ -35,7 +35,6 @@ h1 {
 }
 
 #new-message {
-  position: fixed;
   bottom: 0;
   padding: 10px;
   float: right;

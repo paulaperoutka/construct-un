@@ -10,6 +10,7 @@ import reducers from './components/Chat/reducers';
 import handleNewMessage from './components/Chat/sagas';
 import setupSocket from './components/Chat/sockets';
 import username from './components/Chat/utils/name';
+import Main from './components/auth/Main';
 
 const sagaMiddleware = createSagaMiddleware();
 
