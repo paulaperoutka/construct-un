@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import ChambersPage from "../../pages/ChambersPage";
 // import ResolutionsPage from "../../pages/ResolutionsPage";
 // import ScenarioPage from "../../pages/ScenarioPage";
-import './Main.css';
+// import './Main.css';
 import { Button, Form, FormGroup, Label, Input, FormText, Row, Col } from 'reactstrap';
 import {
   BrowserRouter as Router,
