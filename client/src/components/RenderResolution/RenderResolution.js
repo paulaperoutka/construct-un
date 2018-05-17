@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Row, Col } from "reactstrap";
-// import "./RenderResolution.css";
+import "./RenderResolution.css";
 import ResolutionCarousel from "../ResolutionCarousel";
 
 

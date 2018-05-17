@@ -6,3 +6,12 @@
 	padding-left: 0;
 	width: 100%;
 }
+
+#jumbo-propose {
+	text-align: center;
+}
+
+#submit-button {
+	margin-top: 10px;
+	float: right;
+}
