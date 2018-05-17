@@ -1,37 +1,31 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Button, CardBody, Card, Row,Col,TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
+import { Row, Col } from "reactstrap";
 // import "./RenderResolution.css";
-import Carousel from "../Carousel";
+import ResolutionCarousel from "../ResolutionCarousel";
+
 
 class RenderResolution extends Component {
   state = {
-    displayResolutions = [];
+    displayResolutions: []
   };
 
   componentDidMount() {
     axios.get("/api/resolutions")
     .then(res => {
-      this.setState({
-        renderResolutions: res.data
-      });
+      this.setState({ displayResolutions: res.data });
+      console.log(this.state.displayResolutions, "retrieving resolutions");
     })
     .catch(err => console.log(err));
   }
 
   render() {
     return (
-      <div className = "wrapper">
-        <Row>
-          <Col sm="12">
-            <Carousel resolutions={this.state.displayResolutions} />
-          </Col>
-        </Row>
-      </div>
+      <ResolutionCarousel resolutions={this.state.displayResolutions} />
     );
   }
 }
 
-export default renderResolution;
+export default RenderResolution;
 
 

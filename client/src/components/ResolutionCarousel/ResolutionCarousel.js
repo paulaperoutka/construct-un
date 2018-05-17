@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import {
+  Card,
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
+  Col,
+  Row
 } from "reactstrap";
+import "./ResolutionCarousel.css";
 
-class Carousel extends Component {
-
-	const resolutions = this.props.resolutions;
+class ResolutionCarousel extends Component {
 
   constructor(props) {
     super(props);
@@ -31,13 +31,13 @@ class Carousel extends Component {
 
   next() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === resolutions.length - 1 ? 0 : this.state.activeIndex + 1;
+    const nextIndex = this.state.activeIndex === this.props.resolutions.length - 1 ? 0 : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? resolutions.length - 1 : this.state.activeIndex - 1;
+    const nextIndex = this.state.activeIndex === 0 ? this.props.resolutions.length - 1 : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
@@ -49,23 +49,22 @@ class Carousel extends Component {
   render() {
     const { activeIndex } = this.state;
 
-    const slides = resolutions.map((item) => {
+    const slides = this.props.resolutions.map((item) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.src}
         >
-          <Row>
-            <Col>
-              <h1>{item.resolutionTitle}</h1>
-              <h2>{item.memberNation}</h3>
-              <h2>{item.sponsoringNation}</h3>
-              <h3>{item.objective}</h3>
-              <p>{item.proposal}</p>
-            </Col>
-          </Row>
+          <div id="resolution-render-container">
+            <h4>{item.resolutionTitle}</h4>
+            <h5>Sponsored by: {item.memberNation}</h5>
+            // <h5>{item.sponsoringNation}</h5>
+            // <h6>{item.objective}</h6>
+            // <p>{item.proposal}</p>
+          </div>
         </CarouselItem>
+
       );
     });
 
@@ -76,14 +75,13 @@ class Carousel extends Component {
           next={this.next}
           previous={this.previous}
         >
-          <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {slides}
           <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
           <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
         </Carousel>
-      </Card>1
+      </Card>
     );
   }
 }
 
-export default Carousel;
+export default ResolutionCarousel;
