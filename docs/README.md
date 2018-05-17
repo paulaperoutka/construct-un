@@ -1,6 +1,6 @@
 # Construct UN
 
-One Paragraph of project description goes here
+Construct UN is interactive educational software that brings international relations to life with maps 
 
 ## Getting Started
 
